@@ -12,4 +12,4 @@ TP3, groupe :
 - Ivanoé Megnin-Preiss
 
 - Elora Fouilleul
-	Volet transaction  PAS FAIT 
+  - [ ] Volet transaction
