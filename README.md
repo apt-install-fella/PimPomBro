@@ -12,5 +12,6 @@ TP3, groupe :
 - Ivanoé Megnin-Preiss
   - pdf
 - Elora Fouilleul
+  - [x] Volet transaction
+  - [ ] Transaction dans le tableau de bord
 - Fella Bennounas
-  - [ ] Volet transaction
