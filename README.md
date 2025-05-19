@@ -6,6 +6,7 @@ Différents volets :
 - Volet 3 : Update dans la base (possible utilisation de user controls)
 - Volet 4 : Affichage un par un des données d'une table (par liaison de données) par BindingSource
 - Volet 5 : éditer pdf (possible utilisation bibliothèque textSharp)
+- Volet 6 : Statistiques avec bouton pour aller à la gestion des pompiers
 
 TP3, groupe :
 
