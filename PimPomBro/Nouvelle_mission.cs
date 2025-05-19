@@ -478,9 +478,37 @@ namespace PimPomBro
 
             MessageBox.Show("Mission n° " + idMission.ToString() + " créée avec succès ! Ajout dans la base de donnée effectué");
 
-            //On revient au menu
-            this.Close();
+            reset();
         }
+
+        private void reset()
+        {
+            desafichage();
+            btnValider.Enabled = false;
+            btnConstituerEquipe.Enabled = true;
+            btnValider.ForeColor = Color.Black;
+            btnValider.Font = new Font(btnValider.Font, FontStyle.Regular);
+            btnConstituerEquipe.ForeColor = Color.Navy;
+            btnConstituerEquipe.Font = new Font(btnConstituerEquipe.Font, FontStyle.Bold);
+            txtMotif.Text = "";
+            SetTextDescription(txtMotif, "Motif");
+            txtRue.Text = "";
+            SetTextDescription(txtRue, "Rue");
+            txtCp.Text = "";
+            SetTextDescription(txtCp, "Code Postal");
+            txtVille.Text = "";
+            SetTextDescription(txtVille, "Ville");
+            idMission = MesDatas.DsGlobal.Tables["Mission"].Rows.Count + 1;
+            tabControl1.Controls[0].Text = "Mission n° " + idMission.ToString();
+            DateTime date = DateTime.Now;
+            lblDate.Text = date.ToString("dd/MM/yyyy");
+            lblHeure.Text = date.ToString("HH:mm:ss").Substring(0, 5);
+
+            partirAvec.Clear();
+            mobiliser.Clear();
+
+        }
+
     }
 }
 
