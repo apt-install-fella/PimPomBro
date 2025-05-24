@@ -175,7 +175,16 @@ namespace MenuPrincipal
                 string cp = mission["cp"].ToString();
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
-                string Status = "En cours";
+                string Status;
+
+                if (terminee == 1)
+                {
+                    Status = "Terminée";
+                }
+                else
+                {
+                    Status = "En cours";
+                }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
@@ -232,7 +241,16 @@ namespace MenuPrincipal
                 string cp = mission["cp"].ToString();
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
-                string Status = "En cours";
+                string Status;
+
+                if (terminee == 1)
+                {
+                    Status = "Terminée";
+                }
+                else
+                {
+                    Status = "En cours";
+                }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
@@ -287,7 +305,16 @@ namespace MenuPrincipal
                 string cp = mission["cp"].ToString();
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
-                string Status = "En cours";
+                string Status;
+
+                if (terminee == 1)
+                {
+                    Status = "Terminée";
+                }
+                else
+                {
+                    Status = "En cours";
+                }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
@@ -411,7 +438,8 @@ namespace MenuPrincipal
 
         private void btnGestionDesEngins_Click(object sender, EventArgs e)
         {
-
+            frmGestionEngins gestionEngins = new frmGestionEngins();
+            gestionEngins.ShowDialog(); // ouverture de l'autre formulaire
         }
 
         private void btnGestionDuPersonnel_Click(object sender, EventArgs e)
@@ -442,6 +470,13 @@ namespace MenuPrincipal
             AfficheMission mission = (AfficheMission)btn.Parent;
             int idMission = (int)mission.Tag;
             MessageBox.Show("Clôturer la mission " + idMission);
+
+            if (Convert.ToInt32(MesDatas.DsGlobal.Tables["Mission"].Select("id = " + idMission)[0]["terminee"]) == 1)
+            {
+                MessageBox.Show("Cette mission est déjà clôturé.");
+                return;
+            }
+
             int idCaserne = Convert.ToInt32(MesDatas.DsGlobal.Tables["Mission"].Select("id = " + idMission)[0]["idCaserne"].ToString());
 
             SQLiteTransaction transaction = Connexion.Connec.BeginTransaction();
