@@ -34,9 +34,9 @@ namespace PimPomBro
             lblHeure.Text = heure;
             lblStatus.Text = status;
             lblMotif.Text = motif;
-            if(adresse == "")
+            if(adresse == null)
             {
-                adresse = "-";
+                lblAdresse.Text = ville + " " + cp;
             }
             else { 
                 lblAdresse.Text = adresse + " " + cp;

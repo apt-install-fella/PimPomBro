@@ -101,7 +101,7 @@ namespace MenuPrincipal
                     .Select("id = " + cas)[0]["nom"].ToString();
 
                 string dateHeure = mission["DateHeureDepart"].ToString();
-                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/20" + dateHeure.Substring(0, 2);
+                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/" + dateHeure.Substring(0, 4);
                 string Heure = dateHeure.Substring(10, 6);
 
                 string Adresse = mission["adresse"].ToString();
@@ -168,7 +168,7 @@ namespace MenuPrincipal
                     .Select("id = " + cas)[0]["nom"].ToString();
 
                 string dateHeure = mission["DateHeureDepart"].ToString();
-                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/20" + dateHeure.Substring(0, 2);
+                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/" + dateHeure.Substring(0, 4);
                 string Heure = dateHeure.Substring(10, 6);
 
                 string Adresse = mission["adresse"].ToString();
@@ -234,7 +234,7 @@ namespace MenuPrincipal
                     .Select("id = " + cas)[0]["nom"].ToString();
 
                 string dateHeure = mission["DateHeureDepart"].ToString();
-                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/20" + dateHeure.Substring(0, 2);
+                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/" + dateHeure.Substring(0, 4);
                 string Heure = dateHeure.Substring(10, 6);
 
                 string Adresse = mission["adresse"].ToString();
@@ -298,7 +298,7 @@ namespace MenuPrincipal
                     .Select("id = " + cas)[0]["nom"].ToString();
 
                 string dateHeure = mission["DateHeureDepart"].ToString();
-                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/20" + dateHeure.Substring(0, 2);
+                string Date = dateHeure.Substring(8, 2) + "/" + dateHeure.Substring(5, 2) + "/" + dateHeure.Substring(0, 4);
                 string Heure = dateHeure.Substring(10, 6);
                 
                 string Adresse = mission["adresse"].ToString();
