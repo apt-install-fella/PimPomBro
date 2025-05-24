@@ -27,23 +27,6 @@ namespace PimPomBro
 
         private void frmMission_Load(object sender, EventArgs e)
         {
-            //Remplissage du DataSet
-
-            string req;
-            DataTable schemaTable = Connexion.Connec.GetSchema("Tables");
-            string liste = "";
-            for (int i = 0; i < schemaTable.Rows.Count; i++)
-            {
-                string nomTable = schemaTable.Rows[i][2].ToString();
-                req = @"select * from " + nomTable;
-                SQLiteCommand cd = new SQLiteCommand(req, Connexion.Connec);
-                SQLiteDataAdapter da = new SQLiteDataAdapter(cd);
-                da.Fill(MesDatas.DsGlobal, nomTable);
-                liste += nomTable + "\n";
-            }
-            Connexion.FermerConnexion();
-
-
             //Remplissage des comboBox à partir du DataSet
             remplissageCombo(cboNatureSinitre, "NatureSinistre", "libelle", "id");
             remplissageCombo(cboCaserne, "Caserne", "nom", "id");
@@ -477,7 +460,7 @@ namespace PimPomBro
             }
 
             MessageBox.Show("Mission n° " + idMission.ToString() + " créée avec succès ! Ajout dans la base de donnée effectué");
-
+            MesDatas.DsGlobal.AcceptChanges(); //On valide les modifications dans le DataSet
             reset();
         }
 
@@ -511,14 +494,3 @@ namespace PimPomBro
 
     }
 }
-
-/* TODO :
- * 
- * AU RETOUR MISSION : 
- *  --> modif enMission
- *  --> modif enPanne si besoin
- *  --> modif reparationsEventuelles (table PartirAvec) si besoin
- *  --> modif enMission (table Pompier)
- * 
- * 
- */

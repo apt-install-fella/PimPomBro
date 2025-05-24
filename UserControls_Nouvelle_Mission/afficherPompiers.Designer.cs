@@ -47,6 +47,7 @@
             this.lblMatricule.AutoSize = true;
             this.lblMatricule.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMatricule.Location = new System.Drawing.Point(86, 12);
+            this.lblMatricule.MaximumSize = new System.Drawing.Size(125, 0);
             this.lblMatricule.Name = "lblMatricule";
             this.lblMatricule.Size = new System.Drawing.Size(85, 19);
             this.lblMatricule.TabIndex = 3;
@@ -58,6 +59,7 @@
             this.lblHab.AutoSize = true;
             this.lblHab.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHab.Location = new System.Drawing.Point(89, 52);
+            this.lblHab.MaximumSize = new System.Drawing.Size(125, 0);
             this.lblHab.Name = "lblHab";
             this.lblHab.Size = new System.Drawing.Size(98, 19);
             this.lblHab.TabIndex = 4;
