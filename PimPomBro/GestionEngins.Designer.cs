@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionEngins));
             this.pnlCaserne = new System.Windows.Forms.Panel();
             this.lblCaserne = new System.Windows.Forms.Label();
             this.cboCaserne = new System.Windows.Forms.ComboBox();
@@ -164,42 +165,50 @@
             // 
             // btnFirst
             // 
-            this.btnFirst.Location = new System.Drawing.Point(378, 431);
+            this.btnFirst.BackColor = System.Drawing.Color.Transparent;
+            this.btnFirst.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFirst.BackgroundImage")));
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFirst.Location = new System.Drawing.Point(784, 419);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(198, 40);
+            this.btnFirst.Size = new System.Drawing.Size(101, 91);
             this.btnFirst.TabIndex = 4;
-            this.btnFirst.Text = "Premier";
-            this.btnFirst.UseVisualStyleBackColor = true;
+            this.btnFirst.UseVisualStyleBackColor = false;
             this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnSuivant
             // 
-            this.btnSuivant.Location = new System.Drawing.Point(593, 431);
+            this.btnSuivant.BackColor = System.Drawing.Color.Transparent;
+            this.btnSuivant.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSuivant.BackgroundImage")));
+            this.btnSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSuivant.Location = new System.Drawing.Point(1029, 419);
             this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(198, 40);
+            this.btnSuivant.Size = new System.Drawing.Size(103, 91);
             this.btnSuivant.TabIndex = 5;
-            this.btnSuivant.Text = "Suivant";
-            this.btnSuivant.UseVisualStyleBackColor = true;
+            this.btnSuivant.UseVisualStyleBackColor = false;
             this.btnSuivant.Click += new System.EventHandler(this.btnSuivant_Click);
             // 
             // btnPrecedent
             // 
-            this.btnPrecedent.Location = new System.Drawing.Point(811, 431);
+            this.btnPrecedent.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrecedent.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrecedent.BackgroundImage")));
+            this.btnPrecedent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrecedent.Location = new System.Drawing.Point(916, 419);
             this.btnPrecedent.Name = "btnPrecedent";
-            this.btnPrecedent.Size = new System.Drawing.Size(198, 40);
+            this.btnPrecedent.Size = new System.Drawing.Size(102, 91);
             this.btnPrecedent.TabIndex = 6;
-            this.btnPrecedent.Text = "Précedent";
-            this.btnPrecedent.UseVisualStyleBackColor = true;
+            this.btnPrecedent.UseVisualStyleBackColor = false;
             this.btnPrecedent.Click += new System.EventHandler(this.btnPrecedent_Click);
             // 
             // btnLast
             // 
-            this.btnLast.Location = new System.Drawing.Point(1029, 431);
+            this.btnLast.BackColor = System.Drawing.Color.Transparent;
+            this.btnLast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLast.BackgroundImage")));
+            this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLast.Location = new System.Drawing.Point(1168, 419);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(198, 40);
+            this.btnLast.Size = new System.Drawing.Size(98, 91);
             this.btnLast.TabIndex = 7;
-            this.btnLast.Text = "Dernier";
-            this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.UseVisualStyleBackColor = false;
             this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // btnRetour
