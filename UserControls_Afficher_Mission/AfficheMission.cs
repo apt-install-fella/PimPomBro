@@ -39,10 +39,9 @@ namespace PimPomBro
                 lblAdresse.Text = ville + " " + cp;
             }
             else { 
-                lblAdresse.Text = adresse + " " + cp;
+                lblAdresse.Text = adresse + " " + cp + " " + ville;
             }
 
-            // pictureBoxMission.Image = Image.FromFile("../../Ressources/Mission.png");
             pictureBoxMission.Image = Image.FromFile(chemin1);
             pictureBoxMission.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -95,14 +94,6 @@ namespace PimPomBro
             {
                 this.ClotureMission(sender, e);
             }
-        }
-
-        
-
-
-        private void grpBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnPDF_Click(object sender, EventArgs e)

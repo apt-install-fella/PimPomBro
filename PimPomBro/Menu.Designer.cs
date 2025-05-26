@@ -64,7 +64,7 @@
             this.panel.AutoScroll = true;
             this.panel.Location = new System.Drawing.Point(398, 123);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1133, 719);
+            this.panel.Size = new System.Drawing.Size(1072, 719);
             this.panel.TabIndex = 9;
             // 
             // groupBox
@@ -224,7 +224,7 @@
             // 
             // btnrecherche
             // 
-            this.btnrecherche.Location = new System.Drawing.Point(1490, 55);
+            this.btnrecherche.Location = new System.Drawing.Point(1420, 55);
             this.btnrecherche.Name = "btnrecherche";
             this.btnrecherche.Size = new System.Drawing.Size(37, 31);
             this.btnrecherche.TabIndex = 11;
@@ -245,7 +245,7 @@
             // txtRecherche
             // 
             this.txtRecherche.ForeColor = System.Drawing.Color.Gray;
-            this.txtRecherche.Location = new System.Drawing.Point(1333, 55);
+            this.txtRecherche.Location = new System.Drawing.Point(1277, 53);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(139, 37);
             this.txtRecherche.TabIndex = 7;
@@ -258,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1554, 854);
+            this.ClientSize = new System.Drawing.Size(1482, 854);
             this.Controls.Add(this.chkEnCours);
             this.Controls.Add(this.btnrecherche);
             this.Controls.Add(this.lblPimPomBro);

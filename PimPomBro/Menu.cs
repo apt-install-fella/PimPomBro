@@ -127,7 +127,7 @@ namespace MenuPrincipal
                 Mission.ClotureMission = clotureMission;
                 Mission.Tag = id;
 
-                Mission.Size = new Size(1300, 250);
+                Mission.Size = new Size(1050, 250);
                 Mission.Top = DistanceHaut;
                 Mission.Left = 8;
 
@@ -194,7 +194,7 @@ namespace MenuPrincipal
                 Mission.ClotureMission = clotureMission;
                 Mission.Tag = id;
 
-                Mission.Size = new Size(1300, 250);
+                Mission.Size = new Size(1050, 250);
                 Mission.Top = DistanceHaut;
                 Mission.Left = 8;
 
@@ -260,7 +260,7 @@ namespace MenuPrincipal
                 Mission.ClotureMission = clotureMission;
                 Mission.Tag = id;
 
-                Mission.Size = new Size(1300, 250);
+                Mission.Size = new Size(1050, 250);
                 Mission.Top = DistanceHaut;
                 Mission.Left = 8;
 
@@ -324,7 +324,7 @@ namespace MenuPrincipal
                 Mission.ClotureMission = clotureMission;
                 Mission.Tag = id;
 
-                Mission.Size = new Size(1300, 250);
+                Mission.Size = new Size(1050, 250);
                 Mission.Top = DistanceHaut;
                 Mission.Left = 8;
 
