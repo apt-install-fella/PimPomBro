@@ -29,6 +29,7 @@ namespace PimPomBro
             cboCaserne.ValueMember = "id";
 
             bsEngins.DataSource = MesDatas.DsGlobal.Tables["Engin"];
+            cboCaserne.SelectedIndex = -1; // Aucune caserne sélectionnée au départ
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
@@ -38,9 +39,25 @@ namespace PimPomBro
 
         private void cboCaserne_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            reset();
+            if (cboCaserne.SelectedIndex == -1)
+            {
+                return;
+            }
             int idCaserne = Convert.ToInt32(cboCaserne.SelectedValue);
             bsEngins.Filter = "idCaserne = " + idCaserne;
+            bsEngins.Position = 0; // Positionne le curseur sur le premier élément
             affichageEngin();
+        }
+
+        private void reset()
+        {
+            lblDate.Text = "Date d'arrivée' : ";
+            lblID.Text = "Identifiant : ";
+            chkMission.Checked = false;
+            chkPanne.Checked = false;
+            lblReparations.Visible = false;
+            pctEngin.Image = null;
         }
 
         private void affichageEngin()
