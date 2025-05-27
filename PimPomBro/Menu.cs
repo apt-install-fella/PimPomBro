@@ -622,13 +622,14 @@ namespace MenuPrincipal
             Button btn = (Button)sender;
             AfficheMission mission = (AfficheMission)btn.Parent;
             int idMission = (int)mission.Tag;
-            MessageBox.Show("Clôturer la mission " + idMission);
 
             if (Convert.ToInt32(MesDatas.DsGlobal.Tables["Mission"].Select("id = " + idMission)[0]["terminee"]) == 1)
             {
                 MessageBox.Show("Cette mission est déjà clôturé.");
                 return;
             }
+
+            MessageBox.Show("Clôturer la mission " + idMission);
 
             int idCaserne = Convert.ToInt32(MesDatas.DsGlobal.Tables["Mission"].Select("id = " + idMission)[0]["idCaserne"].ToString());
 
