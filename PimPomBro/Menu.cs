@@ -106,19 +106,21 @@ namespace MenuPrincipal
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
                 string Status;
+                string ch3;
 
                 if (terminee == 1)
                 {
                     Status = "Terminée";
+                    ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
                 }
-                else 
-                { 
+                else
+                {
                     Status = "En cours";
+                    ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
-                string ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
@@ -173,20 +175,22 @@ namespace MenuPrincipal
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
                 string Status;
+                string ch3;
 
                 if (terminee == 1)
                 {
                     Status = "Terminée";
+                    ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
                 }
                 else
                 {
                     Status = "En cours";
+                    ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
-                string ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
-
+                
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
                 Mission.Tag = id;
@@ -239,19 +243,21 @@ namespace MenuPrincipal
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
                 string Status;
+                string ch3;
 
                 if (terminee == 1)
                 {
                     Status = "Terminée";
+                    ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
                 }
                 else
                 {
                     Status = "En cours";
+                    ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
-                string ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
@@ -303,19 +309,21 @@ namespace MenuPrincipal
                 string ville = mission["ville"].ToString();
                 string Motif = mission["motifAppel"].ToString();
                 string Status;
+                string ch3;
 
                 if (terminee == 1)
                 {
                     Status = "Terminée";
+                    ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
                 }
                 else
                 {
                     Status = "En cours";
+                    ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
                 string ch1 = "../../Images/Tableau_bord/Mission.png";
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
-                string ch3 = "../../Images/Tableau_bord/Sign-check-icon.png";
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
