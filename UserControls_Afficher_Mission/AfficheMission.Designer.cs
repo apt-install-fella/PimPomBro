@@ -37,7 +37,6 @@
             this.lblNomHeure = new System.Windows.Forms.Label();
             this.lblNomDate = new System.Windows.Forms.Label();
             this.lblNomCaserne = new System.Windows.Forms.Label();
-            this.lblNomId = new System.Windows.Forms.Label();
             this.pictureBoxMission = new System.Windows.Forms.PictureBox();
             this.lblNatureSinistre = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             // btnTerminer
             // 
             this.btnTerminer.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTerminer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTerminer.Location = new System.Drawing.Point(950, 136);
             this.btnTerminer.Name = "btnTerminer";
             this.btnTerminer.Size = new System.Drawing.Size(84, 85);
@@ -67,6 +67,7 @@
             // btnPDF
             // 
             this.btnPDF.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPDF.Location = new System.Drawing.Point(950, 29);
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(84, 82);
@@ -86,7 +87,6 @@
             this.grpBox1.Controls.Add(this.lblNomHeure);
             this.grpBox1.Controls.Add(this.lblNomDate);
             this.grpBox1.Controls.Add(this.lblNomCaserne);
-            this.grpBox1.Controls.Add(this.lblNomId);
             this.grpBox1.Controls.Add(this.pictureBoxMission);
             this.grpBox1.Controls.Add(this.lblNatureSinistre);
             this.grpBox1.Controls.Add(this.lblStatus);
@@ -105,7 +105,7 @@
             // lblNomMotif
             // 
             this.lblNomMotif.AutoSize = true;
-            this.lblNomMotif.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblNomMotif.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblNomMotif.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.lblNomMotif.Location = new System.Drawing.Point(650, 125);
             this.lblNomMotif.Name = "lblNomMotif";
@@ -116,18 +116,18 @@
             // lblNomStatus
             // 
             this.lblNomStatus.AutoSize = true;
-            this.lblNomStatus.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomStatus.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblNomStatus.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.lblNomStatus.Location = new System.Drawing.Point(650, 88);
             this.lblNomStatus.Name = "lblNomStatus";
-            this.lblNomStatus.Size = new System.Drawing.Size(118, 33);
+            this.lblNomStatus.Size = new System.Drawing.Size(112, 33);
             this.lblNomStatus.TabIndex = 14;
-            this.lblNomStatus.Text = "Status :";
+            this.lblNomStatus.Text = "Statut :";
             // 
             // lblNomAdresse
             // 
             this.lblNomAdresse.AutoSize = true;
-            this.lblNomAdresse.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomAdresse.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblNomAdresse.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.lblNomAdresse.Location = new System.Drawing.Point(194, 200);
             this.lblNomAdresse.Name = "lblNomAdresse";
@@ -138,7 +138,7 @@
             // lblNomHeure
             // 
             this.lblNomHeure.AutoSize = true;
-            this.lblNomHeure.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomHeure.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblNomHeure.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.lblNomHeure.Location = new System.Drawing.Point(194, 162);
             this.lblNomHeure.Name = "lblNomHeure";
@@ -149,7 +149,7 @@
             // lblNomDate
             // 
             this.lblNomDate.AutoSize = true;
-            this.lblNomDate.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomDate.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.lblNomDate.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.lblNomDate.Location = new System.Drawing.Point(194, 125);
             this.lblNomDate.Name = "lblNomDate";
@@ -160,7 +160,7 @@
             // lblNomCaserne
             // 
             this.lblNomCaserne.AutoSize = true;
-            this.lblNomCaserne.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomCaserne.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomCaserne.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.lblNomCaserne.Location = new System.Drawing.Point(194, 88);
             this.lblNomCaserne.Name = "lblNomCaserne";
@@ -168,19 +168,9 @@
             this.lblNomCaserne.TabIndex = 10;
             this.lblNomCaserne.Text = "Caserne :";
             // 
-            // lblNomId
-            // 
-            this.lblNomId.AutoSize = true;
-            this.lblNomId.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomId.Location = new System.Drawing.Point(200, 33);
-            this.lblNomId.Name = "lblNomId";
-            this.lblNomId.Size = new System.Drawing.Size(58, 33);
-            this.lblNomId.TabIndex = 9;
-            this.lblNomId.Text = "id :";
-            // 
             // pictureBoxMission
             // 
-            this.pictureBoxMission.Location = new System.Drawing.Point(17, 26);
+            this.pictureBoxMission.Location = new System.Drawing.Point(19, 52);
             this.pictureBoxMission.Name = "pictureBoxMission";
             this.pictureBoxMission.Size = new System.Drawing.Size(145, 142);
             this.pictureBoxMission.TabIndex = 8;
@@ -192,7 +182,7 @@
             this.lblNatureSinistre.AutoSize = true;
             this.lblNatureSinistre.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNatureSinistre.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblNatureSinistre.Location = new System.Drawing.Point(462, 26);
+            this.lblNatureSinistre.Location = new System.Drawing.Point(379, 26);
             this.lblNatureSinistre.Name = "lblNatureSinistre";
             this.lblNatureSinistre.Size = new System.Drawing.Size(230, 44);
             this.lblNatureSinistre.TabIndex = 7;
@@ -258,10 +248,10 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(245, 31);
+            this.lblId.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(193, 30);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(154, 33);
+            this.lblId.Size = new System.Drawing.Size(184, 40);
             this.lblId.TabIndex = 1;
             this.lblId.Text = "id mission";
             // 
@@ -305,7 +295,6 @@
         private System.Windows.Forms.Label lblNomHeure;
         private System.Windows.Forms.Label lblNomDate;
         private System.Windows.Forms.Label lblNomCaserne;
-        private System.Windows.Forms.Label lblNomId;
         private System.Windows.Forms.PictureBox pictureBoxMission;
         private System.Windows.Forms.Label lblNatureSinistre;
         private System.Windows.Forms.Label lblStatus;

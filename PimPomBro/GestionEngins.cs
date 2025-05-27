@@ -52,11 +52,9 @@ namespace PimPomBro
 
         private void reset()
         {
-            lblDate.Text = "Date d'arrivée' : ";
+            lblDate.Text = "Date d'arrivée : ";
             lblID.Text = "Identifiant : ";
-            chkMission.Checked = false;
-            chkPanne.Checked = false;
-            lblReparations.Visible = false;
+            lblEtat.Text = "Disponible";
             pctEngin.Image = null;
         }
 
@@ -64,25 +62,21 @@ namespace PimPomBro
         {
             DataRowView currentRow = (DataRowView)bsEngins.Current;
             lblID.Text = "Identifiant : " + currentRow["idCaserne"].ToString() + "-" + currentRow["codeTypeEngin"] + "-" + currentRow["numero"];
-            lblDate.Text = "Date d'arrivée' : " + currentRow["dateReception"];
-            if (Convert.ToInt32(currentRow["enMission"]) == 1)
+            lblDate.Text = "Date d'arrivée : " + currentRow["dateReception"];
+            if (Convert.ToInt32(currentRow["enMission"]) == 1 || Convert.ToInt32(currentRow["enPanne"]) == 1)
             {
-                chkMission.Checked = true;
+                if (Convert.ToInt32(currentRow["enPanne"]) == 1)
+                {
+                    lblEtat.Text = "En panne";
+                }
+                else
+                {
+                    lblEtat.Text = "En mission";
+                }
             }
             else
             {
-                chkMission.Checked = false;
-            }
-            if(Convert.ToInt32(currentRow["enPanne"]) == 1)
-            {
-                chkPanne.Checked = true;
-                lblReparations.Visible = true;
-                lblReparations.Text = "Réparations à effectuer : " + currentRow["reparations"];
-            }
-            else
-            {
-                chkPanne.Checked = false;
-                lblReparations.Visible = false;
+                lblEtat.Text = "Disponible";
             }
 
             switch(currentRow["codeTypeEngin"].ToString())

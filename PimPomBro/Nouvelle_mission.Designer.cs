@@ -97,6 +97,7 @@
             // 
             // btnValider
             // 
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Location = new System.Drawing.Point(1215, 718);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(188, 36);
@@ -107,6 +108,7 @@
             // 
             // btnFermer
             // 
+            this.btnFermer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFermer.Location = new System.Drawing.Point(1023, 718);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(188, 36);
@@ -117,6 +119,7 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.Location = new System.Drawing.Point(16, 718);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(159, 36);
@@ -127,6 +130,7 @@
             // 
             // btnConstituerEquipe
             // 
+            this.btnConstituerEquipe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConstituerEquipe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConstituerEquipe.ForeColor = System.Drawing.Color.Navy;
             this.btnConstituerEquipe.Location = new System.Drawing.Point(178, 718);

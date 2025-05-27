@@ -39,9 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnGestionDesEngins = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnNouvelleMission = new System.Windows.Forms.Button();
-            this.btnTableauDeBord = new System.Windows.Forms.Button();
             this.btnrecherche = new System.Windows.Forms.Button();
             this.chkEnCours = new System.Windows.Forms.CheckBox();
             this.txtRecherche = new System.Windows.Forms.TextBox();
@@ -78,9 +76,7 @@
             this.groupBox.Controls.Add(this.button3);
             this.groupBox.Controls.Add(this.button2);
             this.groupBox.Controls.Add(this.btnGestionDesEngins);
-            this.groupBox.Controls.Add(this.button1);
             this.groupBox.Controls.Add(this.btnNouvelleMission);
-            this.groupBox.Controls.Add(this.btnTableauDeBord);
             this.groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox.Location = new System.Drawing.Point(12, 138);
@@ -93,8 +89,9 @@
             // btnGestionDuPersonnel
             // 
             this.btnGestionDuPersonnel.BackColor = System.Drawing.Color.White;
+            this.btnGestionDuPersonnel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionDuPersonnel.ForeColor = System.Drawing.Color.Navy;
-            this.btnGestionDuPersonnel.Location = new System.Drawing.Point(82, 257);
+            this.btnGestionDuPersonnel.Location = new System.Drawing.Point(74, 202);
             this.btnGestionDuPersonnel.Name = "btnGestionDuPersonnel";
             this.btnGestionDuPersonnel.Size = new System.Drawing.Size(272, 49);
             this.btnGestionDuPersonnel.TabIndex = 3;
@@ -108,7 +105,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.ForeColor = System.Drawing.Color.Navy;
-            this.button5.Location = new System.Drawing.Point(31, 323);
+            this.button5.Location = new System.Drawing.Point(23, 268);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(54, 49);
             this.button5.TabIndex = 9;
@@ -117,6 +114,7 @@
             // btnQuit
             // 
             this.btnQuit.BackColor = System.Drawing.Color.DarkGray;
+            this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuit.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnQuit.Location = new System.Drawing.Point(20, 426);
             this.btnQuit.Name = "btnQuit";
@@ -130,7 +128,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.ForeColor = System.Drawing.Color.Navy;
-            this.button4.Location = new System.Drawing.Point(31, 257);
+            this.button4.Location = new System.Drawing.Point(23, 202);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(54, 49);
             this.button4.TabIndex = 8;
@@ -139,8 +137,9 @@
             // btnStatistiques
             // 
             this.btnStatistiques.BackColor = System.Drawing.Color.White;
+            this.btnStatistiques.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStatistiques.ForeColor = System.Drawing.Color.Navy;
-            this.btnStatistiques.Location = new System.Drawing.Point(82, 323);
+            this.btnStatistiques.Location = new System.Drawing.Point(74, 268);
             this.btnStatistiques.Name = "btnStatistiques";
             this.btnStatistiques.Size = new System.Drawing.Size(272, 49);
             this.btnStatistiques.TabIndex = 4;
@@ -154,7 +153,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button3.ForeColor = System.Drawing.Color.Navy;
-            this.button3.Location = new System.Drawing.Point(31, 189);
+            this.button3.Location = new System.Drawing.Point(23, 134);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(55, 49);
             this.button3.TabIndex = 7;
@@ -164,7 +163,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.ForeColor = System.Drawing.Color.Navy;
-            this.button2.Location = new System.Drawing.Point(31, 120);
+            this.button2.Location = new System.Drawing.Point(23, 65);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(54, 49);
             this.button2.TabIndex = 6;
@@ -173,8 +172,9 @@
             // btnGestionDesEngins
             // 
             this.btnGestionDesEngins.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnGestionDesEngins.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGestionDesEngins.ForeColor = System.Drawing.Color.Navy;
-            this.btnGestionDesEngins.Location = new System.Drawing.Point(82, 189);
+            this.btnGestionDesEngins.Location = new System.Drawing.Point(74, 134);
             this.btnGestionDesEngins.Name = "btnGestionDesEngins";
             this.btnGestionDesEngins.Size = new System.Drawing.Size(272, 49);
             this.btnGestionDesEngins.TabIndex = 2;
@@ -184,21 +184,12 @@
             this.btnGestionDesEngins.MouseEnter += new System.EventHandler(this.btnTableauDeBord_MouseEnter);
             this.btnGestionDesEngins.MouseLeave += new System.EventHandler(this.btnTableauDeBord_MouseLeave);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(31, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 50);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // btnNouvelleMission
             // 
             this.btnNouvelleMission.BackColor = System.Drawing.Color.White;
+            this.btnNouvelleMission.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.Navy;
-            this.btnNouvelleMission.Location = new System.Drawing.Point(82, 120);
+            this.btnNouvelleMission.Location = new System.Drawing.Point(74, 65);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
             this.btnNouvelleMission.Size = new System.Drawing.Size(272, 49);
             this.btnNouvelleMission.TabIndex = 1;
@@ -208,22 +199,9 @@
             this.btnNouvelleMission.MouseEnter += new System.EventHandler(this.btnTableauDeBord_MouseEnter);
             this.btnNouvelleMission.MouseLeave += new System.EventHandler(this.btnTableauDeBord_MouseLeave);
             // 
-            // btnTableauDeBord
-            // 
-            this.btnTableauDeBord.BackColor = System.Drawing.Color.White;
-            this.btnTableauDeBord.ForeColor = System.Drawing.Color.Navy;
-            this.btnTableauDeBord.Location = new System.Drawing.Point(82, 53);
-            this.btnTableauDeBord.Name = "btnTableauDeBord";
-            this.btnTableauDeBord.Size = new System.Drawing.Size(272, 50);
-            this.btnTableauDeBord.TabIndex = 0;
-            this.btnTableauDeBord.Text = "Tableau de bord";
-            this.btnTableauDeBord.UseVisualStyleBackColor = false;
-            this.btnTableauDeBord.Click += new System.EventHandler(this.btnTableauDeBord_Click);
-            this.btnTableauDeBord.MouseEnter += new System.EventHandler(this.btnTableauDeBord_MouseEnter);
-            this.btnTableauDeBord.MouseLeave += new System.EventHandler(this.btnTableauDeBord_MouseLeave);
-            // 
             // btnrecherche
             // 
+            this.btnrecherche.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnrecherche.Location = new System.Drawing.Point(1420, 55);
             this.btnrecherche.Name = "btnrecherche";
             this.btnrecherche.Size = new System.Drawing.Size(37, 31);
@@ -288,14 +266,12 @@
         private System.Windows.Forms.Button btnGestionDuPersonnel;
         private System.Windows.Forms.Button btnGestionDesEngins;
         private System.Windows.Forms.Button btnNouvelleMission;
-        private System.Windows.Forms.Button btnTableauDeBord;
         private System.Windows.Forms.Button btnrecherche;
         private System.Windows.Forms.CheckBox chkEnCours;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtRecherche;
     }
 }

@@ -38,9 +38,6 @@ namespace MenuPrincipal
             btnrecherche.Text = "";
 
             // Préparer les icônes des autres boutons
-            button1.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/TabBord.png");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-
             button2.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/Mission.png");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
 

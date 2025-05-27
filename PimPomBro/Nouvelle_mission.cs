@@ -40,6 +40,7 @@ namespace PimPomBro
             tabControl1.Controls[0].Text = "Mission n° " + idMission.ToString();
 
             btnValider.Enabled = false;
+            btnValider.Cursor = Cursors.No;
             txtMotif.Focus();
 
         }
@@ -409,9 +410,11 @@ namespace PimPomBro
                 btnValider.Enabled = true;
                 btnValider.ForeColor = Color.Navy;
                 btnValider.Font = new Font(btnValider.Font, FontStyle.Bold);
+                btnValider.Cursor = Cursors.Hand;
                 btnConstituerEquipe.Enabled = false;
                 btnConstituerEquipe.ForeColor = Color.Black;
                 btnConstituerEquipe.Font = new Font(btnConstituerEquipe.Font, FontStyle.Regular);
+                btnConstituerEquipe.Cursor = Cursors.No;
                 MessageBox.Show("L'équipe a été constituée avec succès ! Vous pouvez maintenant valider la mission.");
             }
             else
@@ -471,6 +474,8 @@ namespace PimPomBro
             btnConstituerEquipe.Enabled = true;
             btnValider.ForeColor = Color.Black;
             btnValider.Font = new Font(btnValider.Font, FontStyle.Regular);
+            btnValider.Cursor = Cursors.No;
+            btnConstituerEquipe.Cursor = Cursors.Hand;
             btnConstituerEquipe.ForeColor = Color.Navy;
             btnConstituerEquipe.Font = new Font(btnConstituerEquipe.Font, FontStyle.Bold);
             txtMotif.Text = "";
