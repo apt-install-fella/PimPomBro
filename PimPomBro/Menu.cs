@@ -532,6 +532,8 @@ namespace MenuPrincipal
                 if (txtRecherche.Text == "")
                 {
                     GenerationMission();
+                    txtRecherche.Text = "id..."; // Réinitialiser le champ de recherche
+                    txtRecherche.ForeColor = Color.Gray; // Remettre la couleur grise
                 }
                 else{
                     int id = int.Parse(txtRecherche.Text);
@@ -542,12 +544,24 @@ namespace MenuPrincipal
             else
             {
                 e.Handled = true;
+                txtRecherche.Text = ""; // Réinitialiser le champ de recherche
+                txtRecherche.ForeColor = Color.Black; // Remettre la couleur noire
             }
         }
 
         private void btnrecherche_Click(object sender, EventArgs e)
         {
-            
+            if (txtRecherche.Text == "" || txtRecherche.Text == "id...")
+            {
+                GenerationMission();
+                txtRecherche.Text = "id..."; // Réinitialiser le champ de recherche
+                txtRecherche.ForeColor = Color.Gray; // Remettre la couleur grise
+            }
+            else
+            {
+                int id = int.Parse(txtRecherche.Text);
+                GenerationMission(id);
+            }
         }
 
         private void btnTableauDeBord_MouseEnter(object sender, EventArgs e)
