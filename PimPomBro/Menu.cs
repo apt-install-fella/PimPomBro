@@ -119,7 +119,44 @@ namespace MenuPrincipal
                     ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
-                string ch1 = "../../Images/Tableau_bord/Mission.png";
+                string ch1;
+                switch (NatureSinistre)
+                {
+                    case "Incendie":
+                        ch1 = "../../Images/Tableau_bord/Missions/incendie.png";
+                        break;
+                    case "Accident de la circulation":
+                        ch1 = "../../Images/Tableau_bord/Missions/accident_circulation.png";
+                        break;
+                    case "Secours d'urgence aux personnes":
+                        ch1 = "../../Images/Tableau_bord/Missions/secours_urgence.png";
+                        break;
+                    case "Risque industriel et pollution":
+                        ch1 = "../../Images/Tableau_bord/Missions/risque_industriel.png";
+                        break;
+                    case "Feu de forêt":
+                        ch1 = "../../Images/Tableau_bord/Missions/feu_foret.png";
+                        break;
+                    case "Protection de la faune":
+                        ch1 = "../../Images/Tableau_bord/Missions/protection_faune.png";
+                        break;
+                    case "Plan d'urgence":
+                        ch1 = "../../Images/Tableau_bord/Missions/plan_urgence.png";
+                        break;
+                    case "Secours en mer ou rivière":
+                        ch1 = "../../Images/Tableau_bord/Missions/sauvetage_mer.png";
+                        break;
+                    case "Eboulement":
+                        ch1 = "../../Images/Tableau_bord/Missions/eboulement.png";
+                        break;
+                    case "Assistance non urgente":
+                        ch1 = "../../Images/Tableau_bord/Missions/assistance_non_urgente.png";
+                        break;
+                    default:
+                        ch1 = "../../Images/Tableau_bord/Mission.png";
+                        break;
+                }
+
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
@@ -188,7 +225,44 @@ namespace MenuPrincipal
                     ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
-                string ch1 = "../../Images/Tableau_bord/Mission.png";
+                string ch1;
+                switch (NatureSinistre)
+                {
+                    case "Incendie":
+                        ch1 = "../../Images/Tableau_bord/Missions/incendie.png";
+                        break;
+                    case "Accident de la circulation":
+                        ch1 = "../../Images/Tableau_bord/Missions/accident_circulation.png";
+                        break;
+                    case "Secours d'urgence aux personnes":
+                        ch1 = "../../Images/Tableau_bord/Missions/secours_urgence.png";
+                        break;
+                    case "Risque industriel et pollution":
+                        ch1 = "../../Images/Tableau_bord/Missions/risque_industriel.png";
+                        break;
+                    case "Feu de forêt":
+                        ch1 = "../../Images/Tableau_bord/Missions/feu_foret.png";
+                        break;
+                    case "Protection de la faune":
+                        ch1 = "../../Images/Tableau_bord/Missions/protection_faune.png";
+                        break;
+                    case "Plan d'urgence":
+                        ch1 = "../../Images/Tableau_bord/Missions/plan_urgence.png";
+                        break;
+                    case "Secours en mer ou rivière":
+                        ch1 = "../../Images/Tableau_bord/Missions/sauvetage_mer.png";
+                        break;
+                    case "Eboulement":
+                        ch1 = "../../Images/Tableau_bord/Missions/eboulement.png";
+                        break;
+                    case "Assistance non urgente":
+                        ch1 = "../../Images/Tableau_bord/Missions/assistance_non_urgente.png";
+                        break;
+                    default:
+                        ch1 = "../../Images/Tableau_bord/Mission.png";
+                        break;
+                }
+
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
                 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
@@ -256,7 +330,44 @@ namespace MenuPrincipal
                     ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
-                string ch1 = "../../Images/Tableau_bord/Mission.png";
+                string ch1;
+                switch (NatureSinistre)
+                {
+                    case "Incendie":
+                        ch1 = "../../Images/Tableau_bord/Missions/incendie.png";
+                        break;
+                    case "Accident de la circulation":
+                        ch1 = "../../Images/Tableau_bord/Missions/accident_circulation.png";
+                        break;
+                    case "Secours d'urgence aux personnes":
+                        ch1 = "../../Images/Tableau_bord/Missions/secours_urgence.png";
+                        break;
+                    case "Risque industriel et pollution":
+                        ch1 = "../../Images/Tableau_bord/Missions/risque_industriel.png";
+                        break;
+                    case "Feu de forêt":
+                        ch1 = "../../Images/Tableau_bord/Missions/feu_foret.png";
+                        break;
+                    case "Protection de la faune":
+                        ch1 = "../../Images/Tableau_bord/Missions/protection_faune.png";
+                        break;
+                    case "Plan d'urgence":
+                        ch1 = "../../Images/Tableau_bord/Missions/plan_urgence.png";
+                        break;
+                    case "Secours en mer ou rivière":
+                        ch1 = "../../Images/Tableau_bord/Missions/sauvetage_mer.png";
+                        break;
+                    case "Eboulement":
+                        ch1 = "../../Images/Tableau_bord/Missions/eboulement.png";
+                        break;
+                    case "Assistance non urgente":
+                        ch1 = "../../Images/Tableau_bord/Missions/assistance_non_urgente.png";
+                        break;
+                    default:
+                        ch1 = "../../Images/Tableau_bord/Mission.png";
+                        break;
+                }
+
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
@@ -322,7 +433,44 @@ namespace MenuPrincipal
                     ch3 = "../../Images/Tableau_bord/archive.png";
                 }
 
-                string ch1 = "../../Images/Tableau_bord/Mission.png";
+                string ch1;
+                switch (NatureSinistre)
+                {
+                    case "Incendie":
+                        ch1 = "../../Images/Tableau_bord/Missions/incendie.png";
+                        break;
+                    case "Accident de la circulation":
+                        ch1 = "../../Images/Tableau_bord/Missions/accident_circulation.png";
+                        break;
+                    case "Secours d'urgence aux personnes":
+                        ch1 = "../../Images/Tableau_bord/Missions/secours_urgence.png";
+                        break;
+                    case "Risque industriel et pollution":
+                        ch1 = "../../Images/Tableau_bord/Missions/risque_industriel.png";
+                        break;
+                    case "Feu de forêt":
+                        ch1 = "../../Images/Tableau_bord/Missions/feu_foret.png";
+                        break;
+                    case "Protection de la faune":
+                        ch1 = "../../Images/Tableau_bord/Missions/protection_faune.png";
+                        break;
+                    case "Plan d'urgence":
+                        ch1 = "../../Images/Tableau_bord/Missions/plan_urgence.png";
+                        break;
+                    case "Secours en mer ou rivière":
+                        ch1 = "../../Images/Tableau_bord/Missions/sauvetage_mer.png";
+                        break;
+                    case "Eboulement":
+                        ch1 = "../../Images/Tableau_bord/Missions/eboulement.png";
+                        break;
+                    case "Assistance non urgente":
+                        ch1 = "../../Images/Tableau_bord/Missions/assistance_non_urgente.png";
+                        break;
+                    default:
+                        ch1 = "../../Images/Tableau_bord/Mission.png";
+                        break;
+                }
+                                
                 string ch2 = "../../Images/Tableau_bord/pdf.png";
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
