@@ -616,10 +616,8 @@ namespace MenuPrincipal
 
         private void btnStatistiques_Click(object sender, EventArgs e)
         {
-            /*
             Statitiques statitiques = new Statitiques();
             statitiques.ShowDialog(); // ouverture de l'autre formulaire
-            */
         }
 
         
