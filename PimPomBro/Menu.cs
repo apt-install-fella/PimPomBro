@@ -6,13 +6,19 @@ using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using PimPomBro;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Org.BouncyCastle.Asn1.IsisMtt.X509;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MenuPrincipal
 {
@@ -32,21 +38,21 @@ namespace MenuPrincipal
             txtRecherche.ForeColor = Color.Gray;
 
             // Préparer le bouton recherche
-            btnrecherche.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/check.png");
+            btnrecherche.BackgroundImage = System.Drawing.Image.FromFile("../../Images/Tableau_bord/check.png");
             btnrecherche.BackgroundImageLayout = ImageLayout.Stretch;
             btnrecherche.Text = "";
 
             // Préparer les icônes des autres boutons
-            button2.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/Mission.png");
+            button2.BackgroundImage = System.Drawing.Image.FromFile("../../Images/Tableau_bord/Mission.png");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
 
-            button3.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/Camion.png");
+            button3.BackgroundImage = System.Drawing.Image.FromFile("../../Images/Tableau_bord/Camion.png");
             button3.BackgroundImageLayout = ImageLayout.Stretch;
 
-            button4.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/Pompiers.png");
+            button4.BackgroundImage = System.Drawing.Image.FromFile("../../Images/Tableau_bord/Pompiers.png");
             button4.BackgroundImageLayout = ImageLayout.Stretch;
 
-            button5.BackgroundImage = Image.FromFile("../../Images/Tableau_bord/Stats.png");
+            button5.BackgroundImage = System.Drawing.Image.FromFile("../../Images/Tableau_bord/Stats.png");
             button5.BackgroundImageLayout = ImageLayout.Stretch;
 
             // Générer les missions à partir du DataSet (mode déconnecté)
@@ -157,12 +163,12 @@ namespace MenuPrincipal
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
+                Mission.PDF = generationPDF;
                 Mission.Tag = id;
 
                 Mission.Size = new Size(1050, 250);
                 Mission.Top = DistanceHaut;
                 Mission.Left = 8;
-
 
                 panel.Controls.Add(Mission);
                 DistanceHaut += 255;
@@ -263,6 +269,7 @@ namespace MenuPrincipal
                 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
+                Mission.PDF = generationPDF;
                 Mission.Tag = id;
 
                 Mission.Size = new Size(1050, 250);
@@ -368,6 +375,7 @@ namespace MenuPrincipal
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
+                Mission.PDF = generationPDF;
                 Mission.Tag = id;
 
                 Mission.Size = new Size(1050, 250);
@@ -471,6 +479,7 @@ namespace MenuPrincipal
 
                 AfficheMission Mission = new AfficheMission(id, NatureSinistre, Caserne, Date, Heure, Adresse, cp, ville, Status, Motif, ch1, ch2, ch3);
                 Mission.ClotureMission = clotureMission;
+                Mission.PDF = generationPDF;
                 Mission.Tag = id;
 
                 Mission.Size = new Size(1050, 250);
@@ -613,7 +622,7 @@ namespace MenuPrincipal
 
         private void clotureMission(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            System.Windows.Forms.Button btn = (System.Windows.Forms.Button)sender;
             AfficheMission mission = (AfficheMission)btn.Parent;
             int idMission = (int)mission.Tag;
 
@@ -772,6 +781,8 @@ namespace MenuPrincipal
                 // On valide la transaction
                 transaction.Commit();
                 MessageBox.Show("Mission " + idMission + " clôturée avec succès.");
+
+                generationPDF(sender, e); // Générer le PDF après la clôture de la mission
             }
             catch (Exception ex)
             {
@@ -786,6 +797,196 @@ namespace MenuPrincipal
                 // On recharge les missions
                 chkEnCours.Checked = false;
                 GenerationMission();
+            }
+        }
+
+
+        private void generationPDF(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button btn = (System.Windows.Forms.Button)sender;
+            AfficheMission mission = (AfficheMission)btn.Parent;
+            string idMission = mission.Tag.ToString();
+            
+            //Récupération des informations nécessaires
+            DataRow[] missionData = MesDatas.DsGlobal.Tables["Mission"].Select("id = " + idMission);
+            int idNatureSinistre = Convert.ToInt32(missionData[0]["idNatureSinistre"]);
+            int idCaserne = Convert.ToInt32(missionData[0]["idCaserne"]);
+            
+            string date = missionData[0]["DateHeureDepart"].ToString().Substring(0, 10);
+            string heure = missionData[0]["DateHeureDepart"].ToString().Substring(11, 5);
+
+            string adresse = missionData[0]["adresse"].ToString();
+            string cp = missionData[0]["cp"].ToString();
+            string ville = missionData[0]["ville"].ToString();
+            string adr;
+            if (!string.IsNullOrEmpty(adresse) && !string.IsNullOrEmpty(cp) && !string.IsNullOrEmpty(ville))
+            {
+                adr = adresse + ", " + cp + " " + ville;
+            }
+            else if (!string.IsNullOrEmpty(adresse))
+            {
+                adr = adresse;
+                if (!string.IsNullOrEmpty(cp))
+                {
+                    adr += ", " + cp + " " + ville;
+                }
+                else if (!string.IsNullOrEmpty(ville))
+                {
+                    adr += ", " + ville;
+                }
+            }
+            else if (!string.IsNullOrEmpty(cp))
+            {
+                adr = cp + " " + ville;
+            }
+            else if(!string.IsNullOrEmpty(ville))
+            {
+                adr = ville;
+            }
+            else
+            {
+                adr = "Adresse non renseignée";
+            }
+            string status = missionData[0]["terminee"].ToString() == "1" ? "terminée" : "en cours";
+            string motif = missionData[0]["motifAppel"].ToString();
+
+            string compteRendu;
+            string dateRetour = "";
+            string heureRetour = "";
+            if (status == "terminée")
+            {
+                if(missionData[0]["compteRendu"] == DBNull.Value || string.IsNullOrEmpty(missionData[0]["compteRendu"].ToString()))
+                {
+                    compteRendu = "Aucun compte rendu disponible.";
+                }
+                else
+                {
+                    compteRendu = missionData[0]["compteRendu"].ToString();
+                }
+                dateRetour = missionData[0]["dateHeureRetour"].ToString().Substring(0, 10);
+                heureRetour = missionData[0]["dateHeureRetour"].ToString().Substring(11, 5);
+            }
+            else
+            {
+                compteRendu = "Aucun compte rendu disponible (mission en cours).";
+            }
+
+            // Récupération de la nature du sinistre
+            string sinistre = MesDatas.DsGlobal.Tables["NatureSinistre"].Select("id = " + idNatureSinistre)[0]["libelle"].ToString();
+
+            // Récupération de la caserne
+            string caserne = MesDatas.DsGlobal.Tables["Caserne"].Select("id = " + idCaserne)[0]["nom"].ToString();
+
+
+
+
+            //Génération du PDF
+            Document doc = new Document();
+            // police grise, taille 16, en gras
+            iTextSharp.text.Font maPolice = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16f, BaseColor.GRAY);
+            // police noir, taille 12, normale
+            iTextSharp.text.Font police = FontFactory.GetFont(FontFactory.TIMES, 12f, BaseColor.BLACK);
+
+            try
+            {
+                string chemin = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"Mission_{idMission}.pdf");
+                PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(chemin, FileMode.Create));
+                doc.Open();
+
+
+                iTextSharp.text.Font titre = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20f, BaseColor.RED);
+                Paragraph pTitre = new Paragraph("Mission " + idMission + " (" + status + ")", titre);
+                pTitre.Alignment = Element.ALIGN_CENTER; // centrer le texte
+                doc.Add(pTitre);
+                doc.Add(new Paragraph(" ")); // espace après le titre
+
+                Paragraph pInfos = new Paragraph("Informations générales : ", maPolice);
+                doc.Add(pInfos);
+
+                doc.Add(new Paragraph("Caserne mobilisée : " + caserne, police));
+                doc.Add(new Paragraph("Déclenchée le : " + date + " à " + heure, police));
+                if (status == "terminée")
+                {
+                    doc.Add(new Paragraph("Terminée le : " + dateRetour + " à " + heureRetour, police));
+                }
+
+                doc.Add(new Paragraph("Adresse du sinistre : " + adr, police));
+
+
+                doc.Add(new Paragraph(" "));
+                Paragraph pNatureSinistre = new Paragraph("Nature du sinistre : " + sinistre, maPolice);
+                doc.Add(pNatureSinistre);
+
+                Paragraph pMotif = new Paragraph("Motif : " + motif, police);
+                pMotif.Alignment = Element.ALIGN_JUSTIFIED; // Justifier le texte
+                doc.Add(pMotif);
+
+                Paragraph pCompteRendu = new Paragraph("Compte rendu : " + compteRendu, police);
+                pCompteRendu.Alignment = Element.ALIGN_JUSTIFIED; 
+                doc.Add(pCompteRendu);
+
+                doc.Add(new Paragraph(" "));
+
+                Paragraph pEnginsMobilises = new Paragraph("Engins mobilisés :", maPolice);
+                doc.Add(pEnginsMobilises);
+
+                // Récupération des engins mobilisés
+                DataRow[] partis = MesDatas.DsGlobal.Tables["PartirAvec"].Select("idMission = " + idMission);
+                foreach (DataRow engin in partis)
+                {
+                    string nomEngin = MesDatas.DsGlobal.Tables["TypeEngin"].Select("code = '" + engin["codeTypeEngin"] + "'")[0]["nom"].ToString();
+                    string texte = $"* {nomEngin} {idCaserne}-{engin["codeTypeEngin"]}-{engin["numeroEngin"]}";
+                    if (engin["reparationsEventuelles"] != DBNull.Value && engin["reparationsEventuelles"].ToString() != "")
+                    {
+                        texte += " (Réparations : " + engin["reparationsEventuelles"] + ")";
+                    }
+                    else
+                    {
+                        texte += " (Aucune réparation nécessaire)";
+                    }
+                    Paragraph pEngin = new Paragraph(texte, police);
+                    pEngin.Alignment = Element.ALIGN_JUSTIFIED;
+                    doc.Add(pEngin);
+                }
+
+                doc.Add(new Paragraph(" "));
+                
+                Paragraph pPompierMobilises = new Paragraph("Pompiers mobilisés :", maPolice);
+                pPompierMobilises.PaddingTop = 10f; // espace entre les sections
+                doc.Add(pPompierMobilises);
+
+                // Récupération des pompiers mobilisés
+                DataRow[] mobilises = MesDatas.DsGlobal.Tables["Mobiliser"].Select("idMission = " + idMission);
+
+                foreach (DataRow mobilise in mobilises)
+                {
+                    DataRow pompierData = MesDatas.DsGlobal.Tables["Pompier"].Select("matricule = " + mobilise["matriculePompier"])[0];
+
+                    string codeGrade = pompierData["codeGrade"].ToString();
+                    string grade = MesDatas.DsGlobal.Tables["Grade"].Select("code = '" + codeGrade + "'")[0]["libelle"].ToString();
+
+                    string nomPompier = pompierData["nom"].ToString();
+                    string prenomPompier = pompierData["prenom"].ToString();
+                    string texte = $"* {grade} {nomPompier} {prenomPompier} (Matricule : {mobilise["matriculePompier"]})";
+                    
+                    string idHabilitation = mobilise["idHabilitation"].ToString();
+                    string habilitation = MesDatas.DsGlobal.Tables["Habilitation"].Select("id = " + idHabilitation)[0]["libelle"].ToString();
+                    texte += $" - Habilitation : {habilitation}";
+
+                    Paragraph pPompier = new Paragraph(texte, police);
+                    pPompier.Alignment = Element.ALIGN_JUSTIFIED;
+                    doc.Add(pPompier);
+                }
+
+                MessageBox.Show($"PDF de la mission {idMission} généré sur le bureau !");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur : " + ex.Message);
+            }
+            finally
+            {
+                doc.Close();
             }
         }
 
