@@ -176,7 +176,6 @@
             this.lblHabilitationsSolicitees.Size = new System.Drawing.Size(407, 40);
             this.lblHabilitationsSolicitees.TabIndex = 4;
             this.lblHabilitationsSolicitees.Text = "Habilitation la plus solicitee :";
-            this.lblHabilitationsSolicitees.Click += new System.EventHandler(this.lblHabilitationsSolicitees_Click);
             // 
             // txtNbInterventions
             // 
@@ -184,7 +183,6 @@
             this.txtNbInterventions.Name = "txtNbInterventions";
             this.txtNbInterventions.Size = new System.Drawing.Size(100, 46);
             this.txtNbInterventions.TabIndex = 2;
-            this.txtNbInterventions.TextChanged += new System.EventHandler(this.txtNbInterventions_TextChanged);
             this.txtNbInterventions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNbInterventions_KeyPress);
             // 
             // lblNbInterventions

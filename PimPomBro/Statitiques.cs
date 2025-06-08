@@ -41,7 +41,7 @@ namespace PimPomBro
 
             lecteur.Close();
 
-            //PANEL SPECIFIC
+            //PANEL SPECIFIQUE
             string requete2 = "SELECT * FROM Caserne";
             SQLiteCommand commande2 = new SQLiteCommand(requete2, Connexion.Connec);
             SQLiteDataReader lecteur2 = commande2.ExecuteReader();
@@ -105,7 +105,7 @@ namespace PimPomBro
             podium.Location = new Point(334, 9);
             tabControl.TabPages[0].Controls.Add(podium);
 
-            //l'engin le plus utile:
+            //l'engin le plus utile :
 
             String req = @"SELECT p.codeTypeEngin, p.numeroEngin, 
                            ROUND(SUM((julianday(m.dateHeureRetour) - julianday(m.dateHeureDepart)) * 24), 2) AS heure
@@ -135,11 +135,6 @@ namespace PimPomBro
         private void txtNbInterventions_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled= true;
-        }
-
-        private void txtNbInterventions_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void cboTypesSinistres_SelectedIndexChanged(object sender, EventArgs e)
@@ -259,11 +254,6 @@ namespace PimPomBro
                 panelCumulEngin.Controls.Add(cumul);
                 top += 80;
             }
-        }
-
-        private void lblHabilitationsSolicitees_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnFrmPompier_Click(object sender, EventArgs e)

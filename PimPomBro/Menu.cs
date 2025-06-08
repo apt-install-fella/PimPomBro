@@ -18,7 +18,6 @@ namespace MenuPrincipal
 {
     public partial class frmTabBord : Form
     {
-
         public frmTabBord()
         {
             InitializeComponent();
@@ -54,7 +53,6 @@ namespace MenuPrincipal
             GenerationMission(); 
         }
 
-        
         public static void ChargerToutesLesTables()
         {
             string req;
@@ -71,8 +69,6 @@ namespace MenuPrincipal
 
             Connexion.FermerConnexion();
         }
-
-
 
         public void GenerationMission()
         {
@@ -487,9 +483,6 @@ namespace MenuPrincipal
         }
 
 
-
-
-
         private void chkEnCours_CheckedChanged(object sender, EventArgs e)
         {
             if (txtRecherche.Text == ""||txtRecherche.Text=="id...")
@@ -576,11 +569,6 @@ namespace MenuPrincipal
             btn.BackColor = Color.White;
         }
 
-        private void Form1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtRecherche_Leave(object sender, EventArgs e)
         {
             if (txtRecherche.Text=="")
@@ -589,11 +577,6 @@ namespace MenuPrincipal
                 txtRecherche.ForeColor = Color.Gray;
             }
             
-        }
-
-        private void btnTableauDeBord_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnNouvelleMission_Click(object sender, EventArgs e)
@@ -621,7 +604,6 @@ namespace MenuPrincipal
         }
 
         
-
         private void txtRecherche_Enter(object sender, EventArgs e)
         {
             txtRecherche.Text = "";
