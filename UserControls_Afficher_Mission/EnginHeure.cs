@@ -24,10 +24,5 @@ namespace PimPomBro
             lblNumero.Text = num;
             lblHeure.Text = Heure;
         }
-
-        private void EnginHeure_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

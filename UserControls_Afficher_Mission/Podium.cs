@@ -24,10 +24,5 @@ namespace PimPomBro
             lbl2.Text = deuxieme;   
             lbl3.Text = troisieme;
         }
-
-        private void Podium_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

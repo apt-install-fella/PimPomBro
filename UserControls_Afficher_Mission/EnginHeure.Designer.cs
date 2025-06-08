@@ -130,7 +130,6 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "EnginHeure";
             this.Size = new System.Drawing.Size(394, 90);
-            this.Load += new System.EventHandler(this.EnginHeure_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
             this.panelNumero.ResumeLayout(false);

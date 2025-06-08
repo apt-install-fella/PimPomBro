@@ -83,7 +83,6 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Podium";
             this.Size = new System.Drawing.Size(303, 211);
-            this.Load += new System.EventHandler(this.Podium_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
