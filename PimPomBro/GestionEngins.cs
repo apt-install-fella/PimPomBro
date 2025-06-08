@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,93 +18,71 @@ namespace PimPomBro
             InitializeComponent();
         }
 
-        private BindingSource bsCaserne = new BindingSource();
-        private BindingSource bsEngins = new BindingSource();
+        BindingSource bsEngins = new BindingSource();
         private string cheminImage = @"../../Images/ImagesEngins/";
+        DataTable dtEngins = new DataTable();
 
         private void frmGestionEngins_Load(object sender, EventArgs e)
         {
-            bsCaserne.DataSource = MesDatas.DsGlobal.Tables["Caserne"];
-            cboCaserne.DataSource = bsCaserne;
+
+            string req = @"select *, idCaserne || '-' || codeTypeEngin || '-' || numero as ID " +
+                          "from Engin";
+            SQLiteDataAdapter daEngins = new SQLiteDataAdapter(req, Connexion.Connec);
+
+            daEngins.Fill(dtEngins);
+            bsEngins.DataSource = dtEngins;
+            bsEngins.Filter = "idCaserne = 1";
+            bsEngins.MoveFirst();
+            lblNom.DataBindings.Add("Text", bsEngins, "ID");
+            lblAcquisition.DataBindings.Add("Text", bsEngins, "dateReception");
+            lblCodeType.DataBindings.Add("Text", bsEngins, "codeTypeEngin");
+            lblEnPanne.DataBindings.Add("Text", bsEngins, "enPanne");
+            lblEnMission.DataBindings.Add("Text", bsEngins, "enMission");
+
+            disponibiliteVehicule();
+            chargerImage();
+
+
+            cboCaserne.DataSource = MesDatas.DsGlobal.Tables["Caserne"];
             cboCaserne.DisplayMember = "nom";
             cboCaserne.ValueMember = "id";
 
-            bsEngins.DataSource = MesDatas.DsGlobal.Tables["Engin"];
-            cboCaserne.SelectedIndex = -1; // Aucune caserne sélectionnée au départ
+            Connexion.FermerConnexion();
+
         }
 
-        private void btnRetour_Click(object sender, EventArgs e)
+        private void disponibiliteVehicule()
         {
-            this.Close();
-        }
-
-        private void cboCaserne_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            reset();
-            if (cboCaserne.SelectedIndex == -1)
+            //MessageBox.Show($"Vérification de la disponibilité du véhicule : {lblEnPanne.Text}, {lblEnMission.Text}");
+            if (lblEnPanne.Text == "1")
             {
-                return;
+                lblDisponibilite.Text = "En panne";
             }
-            int idCaserne = Convert.ToInt32(cboCaserne.SelectedValue);
-            bsEngins.Filter = "idCaserne = " + idCaserne;
-            bsEngins.Position = 0; // Positionne le curseur sur le premier élément
-            affichageEngin();
-        }
-
-        private void reset()
-        {
-            lblDate.Text = "Date d'arrivée : ";
-            lblID.Text = "Identifiant : ";
-            lblEtat.Text = "Disponible";
-            pctEngin.Image = null;
-        }
-
-        private void affichageEngin()
-        {
-            DataRowView currentRow = (DataRowView)bsEngins.Current;
-            lblID.Text = "Identifiant : " + currentRow["idCaserne"].ToString() + "-" + currentRow["codeTypeEngin"] + "-" + currentRow["numero"];
-            lblDate.Text = "Date d'arrivée : " + currentRow["dateReception"];
-            if (Convert.ToInt32(currentRow["enMission"]) == 1 || Convert.ToInt32(currentRow["enPanne"]) == 1)
+            else if (lblEnMission.Text == "1")
             {
-                if (Convert.ToInt32(currentRow["enPanne"]) == 1)
-                {
-                    lblEtat.Text = "En panne";
-                }
-                else
-                {
-                    lblEtat.Text = "En mission";
-                }
+                lblDisponibilite.Text = "En mission";
             }
             else
             {
-                lblEtat.Text = "Disponible";
+                lblDisponibilite.Text = "Disponible";
             }
+        }
 
-            switch(currentRow["codeTypeEngin"].ToString())
+        private void chargerImage()
+        {
+            switch (lblCodeType.Text)
             {
-                case "VSAV":
-                    pctEngin.Image = Image.FromFile(cheminImage + "VSAV.png");
-                    break;
-                case "VSR":
-                    pctEngin.Image = Image.FromFile(cheminImage + "VSR.png");
-                    break;
-                case "EPA":
-                    pctEngin.Image = Image.FromFile(cheminImage + "EPA.png");
-                    break;
                 case "FPT":
                     pctEngin.Image = Image.FromFile(cheminImage + "FPT.png");
                     break;
                 case "CCF":
                     pctEngin.Image = Image.FromFile(cheminImage + "CCF.png");
                     break;
-                case "VSS":
-                    pctEngin.Image = Image.FromFile(cheminImage + "VSS.jpg");
-                    break;                
-                case "VPC":
-                    pctEngin.Image = Image.FromFile(cheminImage + "VPC.png");
-                    break;
                 case "BRS":
                     pctEngin.Image = Image.FromFile(cheminImage + "BRS.jpg");
+                    break;
+                case "EPA":
+                    pctEngin.Image = Image.FromFile(cheminImage + "EPA.png");
                     break;
                 case "FCYN":
                     pctEngin.Image = Image.FromFile(cheminImage + "FCYN.png");
@@ -111,20 +90,38 @@ namespace PimPomBro
                 case "VID":
                     pctEngin.Image = Image.FromFile(cheminImage + "VID.png");
                     break;
+                case "VPC":
+                    pctEngin.Image = Image.FromFile(cheminImage + "VPC.png");
+                    break;
+                case "VSAV":
+                    pctEngin.Image = Image.FromFile(cheminImage + "VSAV.png");
+                    break;
+                case "VSR":
+                    pctEngin.Image = Image.FromFile(cheminImage + "VSR.png");
+                    break;
+                case "VSS":
+                    pctEngin.Image = Image.FromFile(cheminImage + "VSS.jpg");
+                    break;
             }
+        }
 
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
             bsEngins.MoveFirst();
-            affichageEngin();
+            chargerImage();
+            disponibiliteVehicule();
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
             bsEngins.MoveLast();
-            affichageEngin();
+            chargerImage();
+            disponibiliteVehicule();
         }
 
         private void btnSuivant_Click(object sender, EventArgs e)
@@ -133,17 +130,17 @@ namespace PimPomBro
             {
                 bsEngins.MoveFirst();
             }
-            else 
-            { 
+            else
+            {
                 bsEngins.MoveNext();
             }
-
-            affichageEngin();
+            chargerImage();
+            disponibiliteVehicule();
         }
 
         private void btnPrecedent_Click(object sender, EventArgs e)
         {
-            if(bsEngins.Position == 0)
+            if (bsEngins.Position == 0)
             {
                 bsEngins.MoveLast();
             }
@@ -151,7 +148,17 @@ namespace PimPomBro
             {
                 bsEngins.MovePrevious();
             }
-            affichageEngin();
+            chargerImage();
+            disponibiliteVehicule();
+        }
+
+
+        private void cboCaserne_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            bsEngins.Filter = $"idCaserne = {cboCaserne.SelectedValue}";
+            bsEngins.MoveFirst();
+            chargerImage();
+            disponibiliteVehicule();
         }
     }
 }
