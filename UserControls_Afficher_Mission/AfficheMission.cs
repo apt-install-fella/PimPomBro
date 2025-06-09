@@ -22,7 +22,7 @@ namespace PimPomBro
             InitializeComponent();
         }
 
-        public AfficheMission(int id, String type, String caserne, String date, String heure, String adresse, String cp, String ville, String status, String motif, String chemin1, String chemin2, String chemin3)
+        public AfficheMission(int id, string type, string caserne, string date, string heure, string adresse, string cp, string ville, string status, string motif, string chemin1, string chemin2, string chemin3)
         {
             InitializeComponent();
             lblId.Text = id.ToString();

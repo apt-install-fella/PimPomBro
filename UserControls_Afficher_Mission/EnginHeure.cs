@@ -17,7 +17,7 @@ namespace PimPomBro
             InitializeComponent();
         }
 
-        public EnginHeure(String type, String num, String Heure)
+        public EnginHeure(string type, string num, string Heure)
         {
             InitializeComponent();
             lblType.Text = type;
