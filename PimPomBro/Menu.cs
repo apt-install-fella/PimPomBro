@@ -603,7 +603,8 @@ namespace MenuPrincipal
 
         private void btnGestionDuPersonnel_Click(object sender, EventArgs e)
         {
-
+            frmGestionPompiers gestionPompiers = new frmGestionPompiers();
+            gestionPompiers.ShowDialog(); // ouverture de l'autre formulaire
         }
 
         private void btnStatistiques_Click(object sender, EventArgs e)
