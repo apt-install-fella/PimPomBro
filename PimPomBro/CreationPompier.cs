@@ -53,23 +53,23 @@ namespace PimPomBro
 
             // on verifie que l'utilisateur remplis bien tous les champs
             if (nom.Length < 2) {
-                mauvaiseCompletion += "Le nom doit faire au moins 2 characteres\n";
+                mauvaiseCompletion += "Le nom doit faire au moins 2 caractères\n";
             }
             if (prenom.Length < 2)
             {
-                mauvaiseCompletion += "Le prenom doit faire au moins 2 characteres\n";
+                mauvaiseCompletion += "Le prénom doit faire au moins 2 caractères\n";
             }
             if (portable.Length != 10)
             {
-                mauvaiseCompletion += "Le numero de portable doit etre composé de 10 numéro\n";
+                mauvaiseCompletion += "Le numéro de portable doit être composé de 10 numéros\n";
             }
             if (cboCaserneDeRattachement.SelectedIndex == -1)
             {
-                mauvaiseCompletion += "Vous devez selectionner une caserne\n";
+                mauvaiseCompletion += "Vous devez sélectionner une caserne\n";
             }
             if (cboGrade.SelectedIndex == -1)
             {
-                mauvaiseCompletion += "Vous devez selectionner un grade\n";
+                mauvaiseCompletion += "Vous devez sélectionner un grade\n";
             }
 
             if (mauvaiseCompletion.Length > 2)

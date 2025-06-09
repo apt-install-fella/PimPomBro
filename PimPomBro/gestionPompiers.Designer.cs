@@ -678,6 +678,7 @@
             this.Controls.Add(this.picLogo);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionPompiers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestion du Personnel";
             this.Load += new System.EventHandler(this.gestionPompiers_Load);
             this.panel1.ResumeLayout(false);

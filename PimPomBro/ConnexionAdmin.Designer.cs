@@ -129,6 +129,7 @@
             this.Controls.Add(this.txtLogin);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConnexionAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Connection Admin";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -90,6 +90,7 @@
             this.Controls.Add(this.dtpDate);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "dateHabilitation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Date habilitation";
             this.Load += new System.EventHandler(this.dateHabilitation_Load);
             this.ResumeLayout(false);

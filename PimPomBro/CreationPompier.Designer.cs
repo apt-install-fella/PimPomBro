@@ -92,7 +92,7 @@
             this.panel1.Location = new System.Drawing.Point(16, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(668, 1051);
+            this.panel1.Size = new System.Drawing.Size(668, 969);
             this.panel1.TabIndex = 25;
             // 
             // groupBox2
@@ -168,7 +168,7 @@
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(75, 28);
             this.rdbMale.TabIndex = 49;
-            this.rdbMale.Text = "male";
+            this.rdbMale.Text = "mâle";
             this.rdbMale.UseVisualStyleBackColor = true;
             // 
             // label11
@@ -231,7 +231,7 @@
             // 
             this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.btnValider.Location = new System.Drawing.Point(168, 976);
+            this.btnValider.Location = new System.Drawing.Point(168, 905);
             this.btnValider.Margin = new System.Windows.Forms.Padding(4);
             this.btnValider.Name = "btnValider";
             this.btnValider.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -417,14 +417,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BackgroundImage = global::PimPomBro.Properties.Resources.fond_onglet_volet2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(697, 1081);
+            this.ClientSize = new System.Drawing.Size(697, 988);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCreationPompier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Nouveau pompier";
             this.Load += new System.EventHandler(this.CreationPompier_Load);
             this.panel1.ResumeLayout(false);

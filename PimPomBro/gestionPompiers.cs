@@ -29,9 +29,9 @@ namespace PimPomBro
         {
 
             // on affiche les 2 images
-            picLogo.Image = Image.FromFile(@"../../Images/logo.png");
+            picLogo.Image = Image.FromFile(@"../../Images/ImagesGestionPompiers/logo.png");
             picLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            picNouveau.Image = Image.FromFile(@"../../Images/jsp.jpg");
+            picNouveau.Image = Image.FromFile(@"../../Images/ImagesGestionPompiers/jsp.jpg");
 
             // on initialise les combobox des casernes, 
             cboCaserne.DisplayMember = "nom";
@@ -61,7 +61,9 @@ namespace PimPomBro
 
         private void cboCaserne_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblConsigne.Text = "Veuillez selectionner un pompier.";
+            lblConsigne.Text = "Veuillez sélectionner un pompier.";
+            lblConsigne.Font = new Font("Arial", 15, FontStyle.Bold);
+            lblConsigne.BackColor = Color.Transparent;
             cboPompier.Text = "choisir pompier";
 
             if (cboCaserne.SelectedItem == null) { return; }
@@ -126,6 +128,7 @@ namespace PimPomBro
             lblSexe.Text = rowPompier["sexe"].ToString().ToUpper();
             lblDateEmbauche.Text = rowPompier["dateEmbauche"].ToString();
             txtGrade.Text = rowPompier["codeGrade"].ToString();
+            lblDateDeNaissance.Text = rowPompier["dateNaissance"].ToString();
             if (rowPompier["type"].ToString() == "p") { rdbProfessionnel.Checked = true; } else { rdbVolontaire.Checked = true; }
             try
             {
