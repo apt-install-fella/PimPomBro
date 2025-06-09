@@ -82,7 +82,7 @@
             this.General.Controls.Add(this.txtNbInterventions);
             this.General.Controls.Add(this.lblNbInterventions);
             this.General.Controls.Add(this.cboTypesSinistres);
-            this.General.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.General.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.General.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.General.Location = new System.Drawing.Point(4, 49);
             this.General.Name = "General";
@@ -127,81 +127,81 @@
             // lblPompiersParHabilitation
             // 
             this.lblPompiersParHabilitation.AutoSize = true;
-            this.lblPompiersParHabilitation.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPompiersParHabilitation.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPompiersParHabilitation.ForeColor = System.Drawing.Color.Navy;
             this.lblPompiersParHabilitation.Location = new System.Drawing.Point(757, 19);
             this.lblPompiersParHabilitation.Name = "lblPompiersParHabilitation";
-            this.lblPompiersParHabilitation.Size = new System.Drawing.Size(373, 40);
+            this.lblPompiersParHabilitation.Size = new System.Drawing.Size(390, 35);
             this.lblPompiersParHabilitation.TabIndex = 11;
             this.lblPompiersParHabilitation.Text = "Pompiers par habilitation :";
             // 
             // lblTypesHabilitations
             // 
             this.lblTypesHabilitations.AutoSize = true;
-            this.lblTypesHabilitations.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTypesHabilitations.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTypesHabilitations.ForeColor = System.Drawing.Color.Navy;
-            this.lblTypesHabilitations.Location = new System.Drawing.Point(20, 380);
+            this.lblTypesHabilitations.Location = new System.Drawing.Point(20, 409);
             this.lblTypesHabilitations.Name = "lblTypesHabilitations";
-            this.lblTypesHabilitations.Size = new System.Drawing.Size(314, 40);
+            this.lblTypesHabilitations.Size = new System.Drawing.Size(325, 35);
             this.lblTypesHabilitations.TabIndex = 8;
             this.lblTypesHabilitations.Text = "Types d\'habilitations :";
             // 
             // lblTypeSinistre
             // 
             this.lblTypeSinistre.AutoSize = true;
-            this.lblTypeSinistre.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTypeSinistre.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTypeSinistre.ForeColor = System.Drawing.Color.Navy;
-            this.lblTypeSinistre.Location = new System.Drawing.Point(20, 171);
+            this.lblTypeSinistre.Location = new System.Drawing.Point(20, 214);
             this.lblTypeSinistre.Name = "lblTypeSinistre";
-            this.lblTypeSinistre.Size = new System.Drawing.Size(282, 40);
+            this.lblTypeSinistre.Size = new System.Drawing.Size(292, 35);
             this.lblTypeSinistre.TabIndex = 7;
             this.lblTypeSinistre.Text = "Types de sinistres :";
             // 
             // cboHabilitations
             // 
             this.cboHabilitations.FormattingEnabled = true;
-            this.cboHabilitations.Location = new System.Drawing.Point(12, 425);
+            this.cboHabilitations.Location = new System.Drawing.Point(12, 454);
             this.cboHabilitations.Name = "cboHabilitations";
-            this.cboHabilitations.Size = new System.Drawing.Size(496, 48);
+            this.cboHabilitations.Size = new System.Drawing.Size(496, 43);
             this.cboHabilitations.TabIndex = 6;
             this.cboHabilitations.SelectedIndexChanged += new System.EventHandler(this.cboHabilitations_SelectedIndexChanged);
             // 
             // lblHabilitationsSolicitees
             // 
             this.lblHabilitationsSolicitees.AutoSize = true;
-            this.lblHabilitationsSolicitees.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabilitationsSolicitees.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHabilitationsSolicitees.ForeColor = System.Drawing.Color.Navy;
             this.lblHabilitationsSolicitees.Location = new System.Drawing.Point(19, 19);
             this.lblHabilitationsSolicitees.Name = "lblHabilitationsSolicitees";
-            this.lblHabilitationsSolicitees.Size = new System.Drawing.Size(407, 40);
+            this.lblHabilitationsSolicitees.Size = new System.Drawing.Size(425, 35);
             this.lblHabilitationsSolicitees.TabIndex = 4;
             this.lblHabilitationsSolicitees.Text = "Habilitation la plus solicitee :";
             // 
             // txtNbInterventions
             // 
-            this.txtNbInterventions.Location = new System.Drawing.Point(354, 251);
+            this.txtNbInterventions.Location = new System.Drawing.Point(354, 294);
             this.txtNbInterventions.Name = "txtNbInterventions";
-            this.txtNbInterventions.Size = new System.Drawing.Size(100, 46);
+            this.txtNbInterventions.Size = new System.Drawing.Size(100, 42);
             this.txtNbInterventions.TabIndex = 2;
             this.txtNbInterventions.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNbInterventions_KeyPress);
             // 
             // lblNbInterventions
             // 
             this.lblNbInterventions.AutoSize = true;
-            this.lblNbInterventions.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNbInterventions.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNbInterventions.ForeColor = System.Drawing.Color.Navy;
-            this.lblNbInterventions.Location = new System.Drawing.Point(89, 257);
+            this.lblNbInterventions.Location = new System.Drawing.Point(89, 300);
             this.lblNbInterventions.Name = "lblNbInterventions";
-            this.lblNbInterventions.Size = new System.Drawing.Size(308, 35);
+            this.lblNbInterventions.Size = new System.Drawing.Size(347, 33);
             this.lblNbInterventions.TabIndex = 1;
             this.lblNbInterventions.Text = "Nombre d\'interventions :";
             // 
             // cboTypesSinistres
             // 
             this.cboTypesSinistres.FormattingEnabled = true;
-            this.cboTypesSinistres.Location = new System.Drawing.Point(12, 206);
+            this.cboTypesSinistres.Location = new System.Drawing.Point(12, 249);
             this.cboTypesSinistres.Name = "cboTypesSinistres";
-            this.cboTypesSinistres.Size = new System.Drawing.Size(496, 48);
+            this.cboTypesSinistres.Size = new System.Drawing.Size(496, 43);
             this.cboTypesSinistres.TabIndex = 0;
             this.cboTypesSinistres.SelectedIndexChanged += new System.EventHandler(this.cboTypesSinistres_SelectedIndexChanged);
             // 
@@ -218,6 +218,7 @@
             this.precis.Controls.Add(this.lblEngins);
             this.precis.Controls.Add(this.lblCasernes);
             this.precis.Controls.Add(this.cboCasernes);
+            this.precis.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precis.ForeColor = System.Drawing.Color.Black;
             this.precis.Location = new System.Drawing.Point(4, 49);
             this.precis.Name = "precis";
@@ -229,11 +230,11 @@
             // lblUtilisations
             // 
             this.lblUtilisations.AutoSize = true;
-            this.lblUtilisations.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUtilisations.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUtilisations.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lblUtilisations.Location = new System.Drawing.Point(892, 65);
+            this.lblUtilisations.Location = new System.Drawing.Point(905, 65);
             this.lblUtilisations.Name = "lblUtilisations";
-            this.lblUtilisations.Size = new System.Drawing.Size(190, 80);
+            this.lblUtilisations.Size = new System.Drawing.Size(197, 70);
             this.lblUtilisations.TabIndex = 3;
             this.lblUtilisations.Text = "     Heures\r\nd\'utilisations";
             // 
@@ -248,33 +249,34 @@
             // lblNumEngin
             // 
             this.lblNumEngin.AutoSize = true;
-            this.lblNumEngin.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumEngin.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumEngin.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lblNumEngin.Location = new System.Drawing.Point(780, 65);
+            this.lblNumEngin.Location = new System.Drawing.Point(797, 65);
             this.lblNumEngin.Name = "lblNumEngin";
-            this.lblNumEngin.Size = new System.Drawing.Size(123, 80);
+            this.lblNumEngin.Size = new System.Drawing.Size(128, 70);
             this.lblNumEngin.TabIndex = 2;
             this.lblNumEngin.Text = "Numero\r\nd\'engin";
             // 
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lblType.Location = new System.Drawing.Point(663, 63);
+            this.lblType.Location = new System.Drawing.Point(672, 63);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(116, 80);
+            this.lblType.Size = new System.Drawing.Size(119, 70);
             this.lblType.TabIndex = 1;
             this.lblType.Text = "  Type\r\nd\'engin";
             // 
             // lblEnginBest
             // 
+            this.lblEnginBest.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.lblEnginBest.AutoSize = true;
             this.lblEnginBest.BackColor = System.Drawing.Color.Transparent;
-            this.lblEnginBest.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnginBest.Location = new System.Drawing.Point(296, 22);
+            this.lblEnginBest.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnginBest.Location = new System.Drawing.Point(323, 25);
             this.lblEnginBest.Name = "lblEnginBest";
-            this.lblEnginBest.Size = new System.Drawing.Size(98, 40);
+            this.lblEnginBest.Size = new System.Drawing.Size(96, 33);
             this.lblEnginBest.TabIndex = 14;
             this.lblEnginBest.Text = "label1";
             // 
@@ -293,33 +295,33 @@
             // lblHeuresParEngin
             // 
             this.lblHeuresParEngin.AutoSize = true;
-            this.lblHeuresParEngin.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.lblHeuresParEngin.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeuresParEngin.ForeColor = System.Drawing.Color.Navy;
             this.lblHeuresParEngin.Location = new System.Drawing.Point(635, 22);
             this.lblHeuresParEngin.Name = "lblHeuresParEngin";
-            this.lblHeuresParEngin.Size = new System.Drawing.Size(526, 40);
+            this.lblHeuresParEngin.Size = new System.Drawing.Size(552, 35);
             this.lblHeuresParEngin.TabIndex = 7;
             this.lblHeuresParEngin.Text = "Heures d\'utilisation de chaque engin :";
             // 
             // lblEngins
             // 
             this.lblEngins.AutoSize = true;
-            this.lblEngins.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.lblEngins.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEngins.ForeColor = System.Drawing.Color.Navy;
             this.lblEngins.Location = new System.Drawing.Point(19, 22);
             this.lblEngins.Name = "lblEngins";
-            this.lblEngins.Size = new System.Drawing.Size(348, 40);
+            this.lblEngins.Size = new System.Drawing.Size(362, 35);
             this.lblEngins.TabIndex = 5;
             this.lblEngins.Text = "Engins les plus utilises :";
             // 
             // lblCasernes
             // 
             this.lblCasernes.AutoSize = true;
-            this.lblCasernes.Font = new System.Drawing.Font("Arial Narrow", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCasernes.Font = new System.Drawing.Font("Arial", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCasernes.ForeColor = System.Drawing.Color.Navy;
             this.lblCasernes.Location = new System.Drawing.Point(19, 96);
             this.lblCasernes.Name = "lblCasernes";
-            this.lblCasernes.Size = new System.Drawing.Size(301, 40);
+            this.lblCasernes.Size = new System.Drawing.Size(315, 35);
             this.lblCasernes.TabIndex = 1;
             this.lblCasernes.Text = "Choix de la caserne :";
             // 
@@ -328,7 +330,7 @@
             this.cboCasernes.FormattingEnabled = true;
             this.cboCasernes.Location = new System.Drawing.Point(24, 128);
             this.cboCasernes.Name = "cboCasernes";
-            this.cboCasernes.Size = new System.Drawing.Size(478, 48);
+            this.cboCasernes.Size = new System.Drawing.Size(478, 43);
             this.cboCasernes.TabIndex = 0;
             this.cboCasernes.SelectedIndexChanged += new System.EventHandler(this.cboCasernes_SelectedIndexChanged);
             // 
@@ -336,9 +338,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Firebrick;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::PimPomBro.Properties.Resources.fond_onglet_volet2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1387, 711);
             this.Controls.Add(this.tabControl);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "Statitiques";

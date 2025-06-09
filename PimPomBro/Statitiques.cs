@@ -102,7 +102,7 @@ namespace PimPomBro
             String sec=tab[1];
             String last= tab[2];
             Podium podium = new Podium(first, sec,last);
-            podium.Location = new Point(334, 9);
+            podium.Location = new Point(380, 15);
             tabControl.TabPages[0].Controls.Add(podium);
 
             //l'engin le plus utile :
