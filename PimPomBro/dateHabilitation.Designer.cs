@@ -45,34 +45,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F);
             this.label1.Location = new System.Drawing.Point(16, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.MaximumSize = new System.Drawing.Size(267, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 48);
+            this.label1.Size = new System.Drawing.Size(260, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quelle est la date d\'obtention de cette habilitation ?\r\n";
             // 
             // lblHab
             // 
             this.lblHab.AutoSize = true;
-            this.lblHab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHab.Font = new System.Drawing.Font("Arial", 11.25F);
             this.lblHab.Location = new System.Drawing.Point(16, 38);
             this.lblHab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHab.MaximumSize = new System.Drawing.Size(267, 0);
             this.lblHab.Name = "lblHab";
-            this.lblHab.Size = new System.Drawing.Size(98, 24);
+            this.lblHab.Size = new System.Drawing.Size(98, 22);
             this.lblHab.TabIndex = 2;
             this.lblHab.Text = "habilitation";
             // 
             // btnValider
             // 
-            this.btnValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValider.Location = new System.Drawing.Point(91, 210);
+            this.btnValider.Font = new System.Drawing.Font("Arial", 11F);
+            this.btnValider.Location = new System.Drawing.Point(91, 201);
             this.btnValider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(100, 28);
+            this.btnValider.Size = new System.Drawing.Size(114, 37);
             this.btnValider.TabIndex = 3;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;

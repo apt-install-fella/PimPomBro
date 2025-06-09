@@ -170,6 +170,5 @@ namespace PimPomBro
                 e.Handled = true; // on ignore la touche si ce n'est pas un chiffre
             }
         }
-
     }
 }

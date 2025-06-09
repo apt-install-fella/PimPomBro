@@ -260,7 +260,8 @@ namespace PimPomBro
         {
             Connexion.FermerConnexion(); // Ferme la connexion à la base de données avant d'ouvrir un nouveau formulaire
             // Ouvre le formulaire de gestion des pompiers
-
+            frmGestionPompiers gestionPompiers = new frmGestionPompiers();
+            gestionPompiers.Show();
             this.Close();
         }
     }

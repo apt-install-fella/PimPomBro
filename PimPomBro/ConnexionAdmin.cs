@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace PimPomBro
 {
-    public partial class ConnexionAdmin : Form
+    public partial class frmConnexionAdmin : Form
     {
 
         public bool admin { get; private set; } = false;
-        public ConnexionAdmin()
+        public frmConnexionAdmin()
         {
             InitializeComponent();
         }

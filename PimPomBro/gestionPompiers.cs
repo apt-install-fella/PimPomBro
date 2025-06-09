@@ -268,7 +268,7 @@ namespace PimPomBro
         }
         private void connexionAdmin()
         {
-            ConnexionAdmin connexionAdmin = new ConnexionAdmin();
+            frmConnexionAdmin connexionAdmin = new frmConnexionAdmin();
             var result = connexionAdmin.ShowDialog();
             if (result == DialogResult.OK) {
                 admin = true;
