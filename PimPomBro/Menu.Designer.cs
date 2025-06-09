@@ -67,7 +67,9 @@
             // 
             // groupBox
             // 
-            this.groupBox.BackColor = System.Drawing.Color.Firebrick;
+            this.groupBox.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox.BackgroundImage = global::PimPomBro.Properties.Resources.fond_onglet_volet2;
+            this.groupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox.Controls.Add(this.btnGestionDuPersonnel);
             this.groupBox.Controls.Add(this.button5);
             this.groupBox.Controls.Add(this.btnQuit);
@@ -81,7 +83,7 @@
             this.groupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox.Location = new System.Drawing.Point(12, 138);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(367, 507);
+            this.groupBox.Size = new System.Drawing.Size(367, 453);
             this.groupBox.TabIndex = 6;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Menu";
@@ -116,7 +118,7 @@
             this.btnQuit.BackColor = System.Drawing.Color.DarkGray;
             this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuit.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnQuit.Location = new System.Drawing.Point(20, 426);
+            this.btnQuit.Location = new System.Drawing.Point(20, 373);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(123, 60);
             this.btnQuit.TabIndex = 5;

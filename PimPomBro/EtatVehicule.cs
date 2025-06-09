@@ -55,6 +55,12 @@ namespace PimPomBro
 
         private void btnValider_Click(object sender, EventArgs e)
         {
+            if(chkPanne.Checked && string.IsNullOrWhiteSpace(txtReparations.Text))
+            {
+                MessageBox.Show("Veuillez saisir les réparations effectuées ou décocher la case.");
+                return;
+            }
+
             this.DialogResult = DialogResult.OK;
             if(chkPanne.Checked)
             {

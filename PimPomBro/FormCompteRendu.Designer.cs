@@ -55,9 +55,11 @@
             this.txtCompteRendu.Name = "txtCompteRendu";
             this.txtCompteRendu.Size = new System.Drawing.Size(469, 189);
             this.txtCompteRendu.TabIndex = 1;
+            this.txtCompteRendu.TextChanged += new System.EventHandler(this.txtCompteRendu_TextChanged);
             // 
             // btnValider
             // 
+            this.btnValider.Enabled = false;
             this.btnValider.Location = new System.Drawing.Point(351, 311);
             this.btnValider.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnValider.Name = "btnValider";
@@ -69,6 +71,7 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.Location = new System.Drawing.Point(32, 311);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAnnuler.Name = "btnAnnuler";
@@ -102,7 +105,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCompteRendu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "l";
+            this.Text = "Compte rendu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
