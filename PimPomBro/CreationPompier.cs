@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PimPomBro
 {
-    public partial class CreationPompier : Form
+    public partial class frmCreationPompier : Form
     {
-        public CreationPompier()
+        public frmCreationPompier()
         {
             InitializeComponent();
         }

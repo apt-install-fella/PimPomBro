@@ -52,9 +52,13 @@
             this.lblEngins = new System.Windows.Forms.Label();
             this.lblCasernes = new System.Windows.Forms.Label();
             this.cboCasernes = new System.Windows.Forms.ComboBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.General.SuspendLayout();
             this.precis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -71,6 +75,7 @@
             // General
             // 
             this.General.BackColor = System.Drawing.SystemColors.Control;
+            this.General.Controls.Add(this.picLogo);
             this.General.Controls.Add(this.panelPompiers);
             this.General.Controls.Add(this.btnFrmPompier);
             this.General.Controls.Add(this.btnRetour1);
@@ -208,6 +213,7 @@
             // precis
             // 
             this.precis.BackColor = System.Drawing.SystemColors.Control;
+            this.precis.Controls.Add(this.pictureBox1);
             this.precis.Controls.Add(this.lblUtilisations);
             this.precis.Controls.Add(this.panelCumulEngin);
             this.precis.Controls.Add(this.lblNumEngin);
@@ -334,6 +340,32 @@
             this.cboCasernes.TabIndex = 0;
             this.cboCasernes.SelectedIndexChanged += new System.EventHandler(this.cboCasernes_SelectedIndexChanged);
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
+            this.picLogo.Location = new System.Drawing.Point(1248, -1);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(95, 78);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 10;
+            this.picLogo.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::PimPomBro.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(1248, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(95, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // Statitiques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
@@ -355,6 +387,8 @@
             this.General.PerformLayout();
             this.precis.ResumeLayout(false);
             this.precis.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,5 +419,7 @@
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Button btnFrmPompier;
         private System.Windows.Forms.Panel panelPompiers;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

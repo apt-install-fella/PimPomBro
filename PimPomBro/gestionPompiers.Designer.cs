@@ -89,7 +89,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::PimPomBro.Properties.Resources.fond_onglet_volet2;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label14);
@@ -98,16 +100,17 @@
             this.panel1.Controls.Add(this.cboPompier);
             this.panel1.Controls.Add(this.cboCaserne);
             this.panel1.Location = new System.Drawing.Point(17, 148);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(440, 906);
             this.panel1.TabIndex = 0;
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Arial", 12F);
             this.button1.Location = new System.Drawing.Point(113, 811);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 47);
             this.button1.TabIndex = 6;
@@ -141,7 +144,7 @@
             // 
             this.picNouveau.Image = ((System.Drawing.Image)(resources.GetObject("picNouveau.Image")));
             this.picNouveau.Location = new System.Drawing.Point(113, 401);
-            this.picNouveau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picNouveau.Margin = new System.Windows.Forms.Padding(4);
             this.picNouveau.Name = "picNouveau";
             this.picNouveau.Size = new System.Drawing.Size(215, 226);
             this.picNouveau.TabIndex = 3;
@@ -150,9 +153,10 @@
             // 
             // btnNouveau
             // 
+            this.btnNouveau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNouveau.Font = new System.Drawing.Font("Arial", 14.25F);
             this.btnNouveau.Location = new System.Drawing.Point(113, 625);
-            this.btnNouveau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNouveau.Margin = new System.Windows.Forms.Padding(4);
             this.btnNouveau.Name = "btnNouveau";
             this.btnNouveau.Size = new System.Drawing.Size(215, 107);
             this.btnNouveau.TabIndex = 2;
@@ -165,7 +169,7 @@
             this.cboPompier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPompier.FormattingEnabled = true;
             this.cboPompier.Location = new System.Drawing.Point(41, 229);
-            this.cboPompier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPompier.Margin = new System.Windows.Forms.Padding(4);
             this.cboPompier.Name = "cboPompier";
             this.cboPompier.Size = new System.Drawing.Size(352, 33);
             this.cboPompier.TabIndex = 1;
@@ -177,7 +181,7 @@
             this.cboCaserne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCaserne.FormattingEnabled = true;
             this.cboCaserne.Location = new System.Drawing.Point(41, 74);
-            this.cboCaserne.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCaserne.Margin = new System.Windows.Forms.Padding(4);
             this.cboCaserne.Name = "cboCaserne";
             this.cboCaserne.Size = new System.Drawing.Size(352, 33);
             this.cboCaserne.TabIndex = 0;
@@ -185,10 +189,11 @@
             // 
             // picLogo
             // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
             this.picLogo.Location = new System.Drawing.Point(132, -21);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(213, 190);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -203,7 +208,7 @@
             this.pnlInformationsDetaillees.Controls.Add(this.chkConge);
             this.pnlInformationsDetaillees.Controls.Add(this.groupBox1);
             this.pnlInformationsDetaillees.Location = new System.Drawing.Point(23, 496);
-            this.pnlInformationsDetaillees.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlInformationsDetaillees.Margin = new System.Windows.Forms.Padding(4);
             this.pnlInformationsDetaillees.Name = "pnlInformationsDetaillees";
             this.pnlInformationsDetaillees.Size = new System.Drawing.Size(705, 519);
             this.pnlInformationsDetaillees.TabIndex = 3;
@@ -211,9 +216,10 @@
             // 
             // btnAppliquerModif
             // 
+            this.btnAppliquerModif.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAppliquerModif.Font = new System.Drawing.Font("Arial", 12F);
             this.btnAppliquerModif.Location = new System.Drawing.Point(397, 462);
-            this.btnAppliquerModif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAppliquerModif.Margin = new System.Windows.Forms.Padding(4);
             this.btnAppliquerModif.Name = "btnAppliquerModif";
             this.btnAppliquerModif.Size = new System.Drawing.Size(265, 39);
             this.btnAppliquerModif.TabIndex = 19;
@@ -223,9 +229,10 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.Font = new System.Drawing.Font("Arial", 12F);
             this.btnAnnuler.Location = new System.Drawing.Point(232, 462);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(149, 39);
             this.btnAnnuler.TabIndex = 20;
@@ -238,7 +245,7 @@
             this.chkConge.AutoSize = true;
             this.chkConge.Font = new System.Drawing.Font("Arial", 12F);
             this.chkConge.Location = new System.Drawing.Point(29, 462);
-            this.chkConge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkConge.Margin = new System.Windows.Forms.Padding(4);
             this.chkConge.Name = "chkConge";
             this.chkConge.Size = new System.Drawing.Size(112, 27);
             this.chkConge.TabIndex = 18;
@@ -255,9 +262,9 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(17, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(672, 427);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
@@ -268,7 +275,7 @@
             this.lstAffectations.FormattingEnabled = true;
             this.lstAffectations.ItemHeight = 23;
             this.lstAffectations.Location = new System.Drawing.Point(12, 293);
-            this.lstAffectations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstAffectations.Margin = new System.Windows.Forms.Padding(4);
             this.lstAffectations.Name = "lstAffectations";
             this.lstAffectations.Size = new System.Drawing.Size(632, 119);
             this.lstAffectations.TabIndex = 16;
@@ -278,7 +285,7 @@
             this.lstHabilitations.FormattingEnabled = true;
             this.lstHabilitations.ItemHeight = 23;
             this.lstHabilitations.Location = new System.Drawing.Point(12, 112);
-            this.lstHabilitations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstHabilitations.Margin = new System.Windows.Forms.Padding(4);
             this.lstHabilitations.Name = "lstHabilitations";
             this.lstHabilitations.Size = new System.Drawing.Size(635, 119);
             this.lstHabilitations.TabIndex = 15;
@@ -299,7 +306,7 @@
             this.cboCaserneDeRattachement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCaserneDeRattachement.FormattingEnabled = true;
             this.cboCaserneDeRattachement.Location = new System.Drawing.Point(292, 37);
-            this.cboCaserneDeRattachement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCaserneDeRattachement.Margin = new System.Windows.Forms.Padding(4);
             this.cboCaserneDeRattachement.Name = "cboCaserneDeRattachement";
             this.cboCaserneDeRattachement.Size = new System.Drawing.Size(352, 33);
             this.cboCaserneDeRattachement.TabIndex = 11;
@@ -328,12 +335,13 @@
             // 
             // pnlPompier
             // 
+            this.pnlPompier.BackColor = System.Drawing.Color.Transparent;
             this.pnlPompier.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlPompier.Controls.Add(this.pnlInformationsDetaillees);
             this.pnlPompier.Controls.Add(this.btnModifications);
             this.pnlPompier.Controls.Add(this.panel3);
             this.pnlPompier.Location = new System.Drawing.Point(467, 15);
-            this.pnlPompier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPompier.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPompier.Name = "pnlPompier";
             this.pnlPompier.Size = new System.Drawing.Size(750, 1037);
             this.pnlPompier.TabIndex = 1;
@@ -344,7 +352,7 @@
             this.btnModifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifications.ForeColor = System.Drawing.Color.DarkRed;
             this.btnModifications.Location = new System.Drawing.Point(212, 622);
-            this.btnModifications.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModifications.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifications.Name = "btnModifications";
             this.btnModifications.Size = new System.Drawing.Size(335, 78);
             this.btnModifications.TabIndex = 16;
@@ -372,7 +380,7 @@
             this.panel3.Controls.Add(this.lblMatricule);
             this.panel3.Controls.Add(this.lbl14);
             this.panel3.Location = new System.Drawing.Point(23, 21);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(705, 461);
             this.panel3.TabIndex = 2;
@@ -455,9 +463,9 @@
             this.gboCarriere.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gboCarriere.Font = new System.Drawing.Font("Arial", 13F);
             this.gboCarriere.Location = new System.Drawing.Point(29, 268);
-            this.gboCarriere.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gboCarriere.Margin = new System.Windows.Forms.Padding(4);
             this.gboCarriere.Name = "gboCarriere";
-            this.gboCarriere.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gboCarriere.Padding = new System.Windows.Forms.Padding(4);
             this.gboCarriere.Size = new System.Drawing.Size(636, 176);
             this.gboCarriere.TabIndex = 16;
             this.gboCarriere.TabStop = false;
@@ -469,7 +477,7 @@
             this.cboGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGrade.FormattingEnabled = true;
             this.cboGrade.Location = new System.Drawing.Point(259, 46);
-            this.cboGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboGrade.Margin = new System.Windows.Forms.Padding(4);
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(233, 33);
             this.cboGrade.TabIndex = 16;
@@ -512,7 +520,7 @@
             // 
             this.txtGrade.Enabled = false;
             this.txtGrade.Location = new System.Drawing.Point(112, 46);
-            this.txtGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGrade.Margin = new System.Windows.Forms.Padding(4);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.Size = new System.Drawing.Size(113, 32);
             this.txtGrade.TabIndex = 11;
@@ -567,7 +575,7 @@
             this.rdbVolontaire.Enabled = false;
             this.rdbVolontaire.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbVolontaire.Location = new System.Drawing.Point(288, 171);
-            this.rdbVolontaire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbVolontaire.Margin = new System.Windows.Forms.Padding(4);
             this.rdbVolontaire.Name = "rdbVolontaire";
             this.rdbVolontaire.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.rdbVolontaire.Size = new System.Drawing.Size(118, 27);
@@ -582,7 +590,7 @@
             this.rdbProfessionnel.Enabled = false;
             this.rdbProfessionnel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbProfessionnel.Location = new System.Drawing.Point(111, 171);
-            this.rdbProfessionnel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbProfessionnel.Margin = new System.Windows.Forms.Padding(4);
             this.rdbProfessionnel.Name = "rdbProfessionnel";
             this.rdbProfessionnel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.rdbProfessionnel.Size = new System.Drawing.Size(149, 27);
@@ -631,7 +639,7 @@
             this.lblMatricule.Location = new System.Drawing.Point(389, 12);
             this.lblMatricule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMatricule.Name = "lblMatricule";
-            this.lblMatricule.Size = new System.Drawing.Size(93, 39);
+            this.lblMatricule.Size = new System.Drawing.Size(89, 38);
             this.lblMatricule.TabIndex = 7;
             this.lblMatricule.Text = "????";
             // 
@@ -642,7 +650,7 @@
             this.lbl14.Location = new System.Drawing.Point(216, 12);
             this.lbl14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl14.Name = "lbl14";
-            this.lbl14.Size = new System.Drawing.Size(152, 39);
+            this.lbl14.Size = new System.Drawing.Size(147, 38);
             this.lbl14.TabIndex = 6;
             this.lbl14.Text = "Matricule";
             // 
@@ -662,12 +670,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackgroundImage = global::PimPomBro.Properties.Resources.Fond_Form_volet2;
             this.ClientSize = new System.Drawing.Size(1233, 1068);
             this.Controls.Add(this.pnlPompier);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblConsigne);
             this.Controls.Add(this.picLogo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionPompiers";
             this.Text = "Gestion du Personnel";
             this.Load += new System.EventHandler(this.gestionPompiers_Load);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPimPomBro = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.btnGestionDuPersonnel = new System.Windows.Forms.Button();
@@ -43,19 +42,10 @@
             this.btnrecherche = new System.Windows.Forms.Button();
             this.chkEnCours = new System.Windows.Forms.CheckBox();
             this.txtRecherche = new System.Windows.Forms.TextBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblPimPomBro
-            // 
-            this.lblPimPomBro.AutoSize = true;
-            this.lblPimPomBro.Font = new System.Drawing.Font("Rockwell", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPimPomBro.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblPimPomBro.Location = new System.Drawing.Point(24, 38);
-            this.lblPimPomBro.Name = "lblPimPomBro";
-            this.lblPimPomBro.Size = new System.Drawing.Size(318, 57);
-            this.lblPimPomBro.TabIndex = 10;
-            this.lblPimPomBro.Text = "PimPomBro ";
             // 
             // panel
             // 
@@ -81,7 +71,7 @@
             this.groupBox.Controls.Add(this.btnNouvelleMission);
             this.groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox.Location = new System.Drawing.Point(12, 138);
+            this.groupBox.Location = new System.Drawing.Point(12, 160);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(367, 453);
             this.groupBox.TabIndex = 6;
@@ -234,17 +224,30 @@
             this.txtRecherche.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecherche_KeyPress);
             this.txtRecherche.Leave += new System.EventHandler(this.txtRecherche_Leave);
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
+            this.picLogo.Location = new System.Drawing.Point(86, -17);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(213, 190);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 10;
+            this.picLogo.TabStop = false;
+            // 
             // frmTabBord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 854);
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.chkEnCours);
             this.Controls.Add(this.btnrecherche);
-            this.Controls.Add(this.lblPimPomBro);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.txtRecherche);
-            this.Controls.Add(this.groupBox);
+            this.Controls.Add(this.picLogo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmTabBord";
@@ -252,14 +255,13 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblPimPomBro;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Button btnQuit;
@@ -274,6 +276,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtRecherche;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 

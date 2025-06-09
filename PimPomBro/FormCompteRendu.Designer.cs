@@ -59,6 +59,7 @@
             // 
             // btnValider
             // 
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Enabled = false;
             this.btnValider.Location = new System.Drawing.Point(351, 311);
             this.btnValider.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -71,6 +72,7 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.Location = new System.Drawing.Point(32, 311);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

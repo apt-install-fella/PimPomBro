@@ -55,12 +55,14 @@
             this.pnlDate = new System.Windows.Forms.Panel();
             this.lblDeclenche = new System.Windows.Forms.Label();
             this.erpErreurSaisie = new System.Windows.Forms.ErrorProvider(this.components);
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tbpMission.SuspendLayout();
             this.pnlDecisions.SuspendLayout();
             this.pnlInfosUsagers.SuspendLayout();
             this.pnlDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpErreurSaisie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -69,7 +71,7 @@
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.ItemSize = new System.Drawing.Size(200, 37);
-            this.tabControl1.Location = new System.Drawing.Point(25, 27);
+            this.tabControl1.Location = new System.Drawing.Point(21, 80);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -334,7 +336,7 @@
             this.pnlDate.Controls.Add(this.lblDeclenche);
             this.pnlDate.Controls.Add(this.lblDate);
             this.pnlDate.Controls.Add(this.lblHeure);
-            this.pnlDate.Location = new System.Drawing.Point(1029, 12);
+            this.pnlDate.Location = new System.Drawing.Point(1029, 65);
             this.pnlDate.Name = "pnlDate";
             this.pnlDate.Size = new System.Drawing.Size(419, 55);
             this.pnlDate.TabIndex = 7;
@@ -354,6 +356,19 @@
             // 
             this.erpErreurSaisie.ContainerControl = this;
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
+            this.picLogo.Location = new System.Drawing.Point(4, -5);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(95, 78);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 11;
+            this.picLogo.TabStop = false;
+            // 
             // frmMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -361,7 +376,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PimPomBro.Properties.Resources.Fond_Form_volet2;
-            this.ClientSize = new System.Drawing.Size(1463, 846);
+            this.ClientSize = new System.Drawing.Size(1463, 908);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.pnlDate);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -379,6 +395,7 @@
             this.pnlDate.ResumeLayout(false);
             this.pnlDate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erpErreurSaisie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -410,6 +427,7 @@
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnFermer;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 

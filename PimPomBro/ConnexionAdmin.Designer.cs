@@ -41,7 +41,7 @@
             // 
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.Location = new System.Drawing.Point(171, 123);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(323, 30);
             this.txtLogin.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.txtMDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMDP.Location = new System.Drawing.Point(171, 213);
-            this.txtMDP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMDP.Margin = new System.Windows.Forms.Padding(4);
             this.txtMDP.Name = "txtMDP";
             this.txtMDP.Size = new System.Drawing.Size(323, 30);
             this.txtMDP.TabIndex = 1;
@@ -92,11 +92,12 @@
             // 
             // btnSeConnecter
             // 
+            this.btnSeConnecter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeConnecter.Font = new System.Drawing.Font("Arial", 12F);
             this.btnSeConnecter.Location = new System.Drawing.Point(289, 274);
-            this.btnSeConnecter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSeConnecter.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeConnecter.Name = "btnSeConnecter";
-            this.btnSeConnecter.Size = new System.Drawing.Size(150, 38);
+            this.btnSeConnecter.Size = new System.Drawing.Size(163, 38);
             this.btnSeConnecter.TabIndex = 5;
             this.btnSeConnecter.Text = "Se connecter";
             this.btnSeConnecter.UseVisualStyleBackColor = true;
@@ -104,11 +105,12 @@
             // 
             // btnAnnuler
             // 
+            this.btnAnnuler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnnuler.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnAnnuler.Location = new System.Drawing.Point(149, 274);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnnuler.Location = new System.Drawing.Point(134, 274);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(136, 38);
+            this.btnAnnuler.Size = new System.Drawing.Size(151, 38);
             this.btnAnnuler.TabIndex = 6;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
@@ -125,7 +127,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMDP);
             this.Controls.Add(this.txtLogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConnexionAdmin";
             this.Text = "Connection Admin";
             this.ResumeLayout(false);

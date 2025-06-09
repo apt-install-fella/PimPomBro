@@ -286,7 +286,7 @@ namespace PimPomBro
             // s'il n'est toujours pas connecté on quitte la fonction
             if (!admin) { return; }
 
-            CreationPompier creationPompier = new CreationPompier();
+            frmCreationPompier creationPompier = new frmCreationPompier();
             creationPompier.ShowDialog();
 
             this.gestionPompiers_Load(sender, e);

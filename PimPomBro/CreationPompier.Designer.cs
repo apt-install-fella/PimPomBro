@@ -1,6 +1,6 @@
 ﻿namespace PimPomBro
 {
-    partial class CreationPompier
+    partial class frmCreationPompier
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@
             this.panel1.Controls.Add(this.txtPrenom);
             this.panel1.Controls.Add(this.txtNom);
             this.panel1.Location = new System.Drawing.Point(16, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(668, 1051);
             this.panel1.TabIndex = 25;
@@ -100,9 +100,9 @@
             this.groupBox2.Controls.Add(this.rdbVolontaire);
             this.groupBox2.Controls.Add(this.rdbProfessionnel);
             this.groupBox2.Location = new System.Drawing.Point(287, 473);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(201, 90);
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
@@ -113,7 +113,7 @@
             this.rdbVolontaire.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.rdbVolontaire.ForeColor = System.Drawing.Color.AliceBlue;
             this.rdbVolontaire.Location = new System.Drawing.Point(8, 49);
-            this.rdbVolontaire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbVolontaire.Margin = new System.Windows.Forms.Padding(4);
             this.rdbVolontaire.Name = "rdbVolontaire";
             this.rdbVolontaire.Size = new System.Drawing.Size(126, 28);
             this.rdbVolontaire.TabIndex = 38;
@@ -126,7 +126,7 @@
             this.rdbProfessionnel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.rdbProfessionnel.ForeColor = System.Drawing.Color.AliceBlue;
             this.rdbProfessionnel.Location = new System.Drawing.Point(8, 12);
-            this.rdbProfessionnel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbProfessionnel.Margin = new System.Windows.Forms.Padding(4);
             this.rdbProfessionnel.Name = "rdbProfessionnel";
             this.rdbProfessionnel.Size = new System.Drawing.Size(161, 28);
             this.rdbProfessionnel.TabIndex = 37;
@@ -138,9 +138,9 @@
             this.groupBox1.Controls.Add(this.rdbFemelle);
             this.groupBox1.Controls.Add(this.rdbMale);
             this.groupBox1.Location = new System.Drawing.Point(292, 218);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(237, 49);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
@@ -151,7 +151,7 @@
             this.rdbFemelle.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.rdbFemelle.ForeColor = System.Drawing.Color.AliceBlue;
             this.rdbFemelle.Location = new System.Drawing.Point(8, 16);
-            this.rdbFemelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbFemelle.Margin = new System.Windows.Forms.Padding(4);
             this.rdbFemelle.Name = "rdbFemelle";
             this.rdbFemelle.Size = new System.Drawing.Size(98, 28);
             this.rdbFemelle.TabIndex = 50;
@@ -164,7 +164,7 @@
             this.rdbMale.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.rdbMale.ForeColor = System.Drawing.Color.AliceBlue;
             this.rdbMale.Location = new System.Drawing.Point(147, 16);
-            this.rdbMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbMale.Margin = new System.Windows.Forms.Padding(4);
             this.rdbMale.Name = "rdbMale";
             this.rdbMale.Size = new System.Drawing.Size(75, 28);
             this.rdbMale.TabIndex = 49;
@@ -187,7 +187,7 @@
             // 
             this.txtBip.Font = new System.Drawing.Font("Arial", 12F);
             this.txtBip.Location = new System.Drawing.Point(292, 332);
-            this.txtBip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBip.Margin = new System.Windows.Forms.Padding(4);
             this.txtBip.Name = "txtBip";
             this.txtBip.Size = new System.Drawing.Size(260, 30);
             this.txtBip.TabIndex = 49;
@@ -221,7 +221,7 @@
             // 
             this.txtPortable.Font = new System.Drawing.Font("Arial", 12F);
             this.txtPortable.Location = new System.Drawing.Point(292, 284);
-            this.txtPortable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPortable.Margin = new System.Windows.Forms.Padding(4);
             this.txtPortable.Name = "txtPortable";
             this.txtPortable.Size = new System.Drawing.Size(260, 30);
             this.txtPortable.TabIndex = 44;
@@ -229,9 +229,10 @@
             // 
             // btnValider
             // 
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Font = new System.Drawing.Font("Arial", 14.25F);
             this.btnValider.Location = new System.Drawing.Point(168, 976);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(4);
             this.btnValider.Name = "btnValider";
             this.btnValider.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnValider.Size = new System.Drawing.Size(320, 54);
@@ -257,7 +258,7 @@
             this.clbHab.Font = new System.Drawing.Font("Arial", 11F);
             this.clbHab.FormattingEnabled = true;
             this.clbHab.Location = new System.Drawing.Point(116, 737);
-            this.clbHab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clbHab.Margin = new System.Windows.Forms.Padding(4);
             this.clbHab.Name = "clbHab";
             this.clbHab.Size = new System.Drawing.Size(436, 148);
             this.clbHab.TabIndex = 41;
@@ -267,7 +268,7 @@
             this.cboCaserneDeRattachement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCaserneDeRattachement.FormattingEnabled = true;
             this.cboCaserneDeRattachement.Location = new System.Drawing.Point(292, 580);
-            this.cboCaserneDeRattachement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCaserneDeRattachement.Margin = new System.Windows.Forms.Padding(4);
             this.cboCaserneDeRattachement.Name = "cboCaserneDeRattachement";
             this.cboCaserneDeRattachement.Size = new System.Drawing.Size(260, 33);
             this.cboCaserneDeRattachement.TabIndex = 40;
@@ -289,7 +290,7 @@
             this.cboGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGrade.FormattingEnabled = true;
             this.cboGrade.Location = new System.Drawing.Point(292, 646);
-            this.cboGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboGrade.Margin = new System.Windows.Forms.Padding(4);
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(260, 33);
             this.cboGrade.TabIndex = 38;
@@ -333,7 +334,7 @@
             // dtpEmbauche
             // 
             this.dtpEmbauche.Location = new System.Drawing.Point(292, 427);
-            this.dtpEmbauche.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpEmbauche.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEmbauche.Name = "dtpEmbauche";
             this.dtpEmbauche.Size = new System.Drawing.Size(260, 22);
             this.dtpEmbauche.TabIndex = 32;
@@ -353,7 +354,7 @@
             // dtpNaissance
             // 
             this.dtpNaissance.Location = new System.Drawing.Point(292, 186);
-            this.dtpNaissance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNaissance.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNaissance.Name = "dtpNaissance";
             this.dtpNaissance.Size = new System.Drawing.Size(260, 22);
             this.dtpNaissance.TabIndex = 30;
@@ -398,7 +399,7 @@
             // 
             this.txtPrenom.Font = new System.Drawing.Font("Arial", 12F);
             this.txtPrenom.Location = new System.Drawing.Point(292, 133);
-            this.txtPrenom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrenom.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(260, 30);
             this.txtPrenom.TabIndex = 26;
@@ -407,12 +408,12 @@
             // 
             this.txtNom.Font = new System.Drawing.Font("Arial", 12F);
             this.txtNom.Location = new System.Drawing.Point(292, 76);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(260, 30);
             this.txtNom.TabIndex = 25;
             // 
-            // CreationPompier
+            // frmCreationPompier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -422,8 +423,8 @@
             this.ClientSize = new System.Drawing.Size(697, 1081);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "CreationPompier";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "frmCreationPompier";
             this.Text = "Nouveau pompier";
             this.Load += new System.EventHandler(this.CreationPompier_Load);
             this.panel1.ResumeLayout(false);

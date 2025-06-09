@@ -48,9 +48,11 @@
             this.lblEnPanne = new System.Windows.Forms.Label();
             this.lblEnMission = new System.Windows.Forms.Label();
             this.lblCodeType = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlCaserne.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctEngin)).BeginInit();
             this.pnlInfosEngin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCaserne
@@ -263,6 +265,19 @@
             this.lblCodeType.Size = new System.Drawing.Size(0, 23);
             this.lblCodeType.TabIndex = 6;
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
+            this.picLogo.Location = new System.Drawing.Point(1186, 472);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(95, 78);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 9;
+            this.picLogo.TabStop = false;
+            // 
             // frmGestionEngins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -270,6 +285,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = global::PimPomBro.Properties.Resources.Fond_Form_volet2;
             this.ClientSize = new System.Drawing.Size(1294, 563);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnPrecedent);
@@ -292,6 +308,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctEngin)).EndInit();
             this.pnlInfosEngin.ResumeLayout(false);
             this.pnlInfosEngin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +334,6 @@
         private System.Windows.Forms.Label lblEnPanne;
         private System.Windows.Forms.Label lblEnMission;
         private System.Windows.Forms.Label lblCodeType;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

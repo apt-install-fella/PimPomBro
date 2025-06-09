@@ -37,7 +37,7 @@
             // dtpDate
             // 
             this.dtpDate.Location = new System.Drawing.Point(16, 150);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(265, 22);
             this.dtpDate.TabIndex = 0;
@@ -68,9 +68,10 @@
             // 
             // btnValider
             // 
+            this.btnValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnValider.Font = new System.Drawing.Font("Arial", 11F);
             this.btnValider.Location = new System.Drawing.Point(91, 201);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(4);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(114, 37);
             this.btnValider.TabIndex = 3;
@@ -87,7 +88,7 @@
             this.Controls.Add(this.lblHab);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpDate);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "dateHabilitation";
             this.Text = "Date habilitation";
             this.Load += new System.EventHandler(this.dateHabilitation_Load);
