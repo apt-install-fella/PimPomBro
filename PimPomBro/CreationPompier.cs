@@ -101,14 +101,26 @@ namespace PimPomBro
                 cmd.Parameters.AddWithValue("@nom", txtNom.Text);
                 cmd.Parameters.AddWithValue("@prenom", txtPrenom.Text);
                 cmd.Parameters.AddWithValue("@sexe", rdbFemelle.Checked ? "f" : "m" );
-                cmd.Parameters.AddWithValue("@dateNaissance", dtpNaissance.Value.ToString());
+
+                string dateNaissance = dtpNaissance.Value.ToString().Substring(0, 10);
+                string jour = dateNaissance.Substring(0, 2);
+                string mois = dateNaissance.Substring(3, 2);
+                string annee = dateNaissance.Substring(6, 4);
+                dateNaissance = $"{annee}-{mois}-{jour}"; // format YYYY-MM-DD
+                cmd.Parameters.AddWithValue("@dateNaissance", dateNaissance);
                 cmd.Parameters.AddWithValue("@type", rdbProfessionnel.Checked ? "p" : "v" );
                 cmd.Parameters.AddWithValue("@portable", txtPortable.Text);
                 cmd.Parameters.AddWithValue("@bip", (txtBip.TextLength == 0) ? matricule : Convert.ToInt32(txtBip.Text));
                 cmd.Parameters.AddWithValue("@enMission", 0);
                 cmd.Parameters.AddWithValue("@enConge", 0);
                 cmd.Parameters.AddWithValue("@codeGrade", codeGrade);
-                cmd.Parameters.AddWithValue("@dateEmbauche", dtpEmbauche.Value.ToString());
+
+                string dateEmbauche = dtpEmbauche.Value.ToString().Substring(0, 10);
+                jour = dateEmbauche.Substring(0, 2);
+                mois = dateEmbauche.Substring(3, 2);
+                annee = dateEmbauche.Substring(6, 4);
+                dateEmbauche = $"{annee}-{mois}-{jour}"; // format YYYY-MM-DD
+                cmd.Parameters.AddWithValue("@dateEmbauche", dateEmbauche);
                 cmd.ExecuteNonQuery();
 
                 requete = "INSERT INTO Affectation VALUES (@matricule, @dateA, '', @caserne)";
@@ -168,6 +180,10 @@ namespace PimPomBro
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true; // on ignore la touche si ce n'est pas un chiffre
+            }
+            if(txtPortable.TextLength >= 10 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // on ignore la touche si le champ est déjà plein
             }
         }
     }

@@ -30,6 +30,7 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panelPompiers = new System.Windows.Forms.Panel();
             this.btnFrmPompier = new System.Windows.Forms.Button();
             this.btnRetour1 = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.lblNbInterventions = new System.Windows.Forms.Label();
             this.cboTypesSinistres = new System.Windows.Forms.ComboBox();
             this.precis = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUtilisations = new System.Windows.Forms.Label();
             this.panelCumulEngin = new System.Windows.Forms.Panel();
             this.lblNumEngin = new System.Windows.Forms.Label();
@@ -52,12 +54,10 @@
             this.lblEngins = new System.Windows.Forms.Label();
             this.lblCasernes = new System.Windows.Forms.Label();
             this.cboCasernes = new System.Windows.Forms.ComboBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.General.SuspendLayout();
-            this.precis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.precis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,19 @@
             this.General.Size = new System.Drawing.Size(1339, 638);
             this.General.TabIndex = 0;
             this.General.Text = "Infos Generales";
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
+            this.picLogo.Location = new System.Drawing.Point(1248, -1);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(95, 78);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 10;
+            this.picLogo.TabStop = false;
             // 
             // panelPompiers
             // 
@@ -184,6 +197,7 @@
             // 
             // txtNbInterventions
             // 
+            this.txtNbInterventions.Cursor = System.Windows.Forms.Cursors.No;
             this.txtNbInterventions.Location = new System.Drawing.Point(354, 294);
             this.txtNbInterventions.Name = "txtNbInterventions";
             this.txtNbInterventions.Size = new System.Drawing.Size(100, 42);
@@ -232,6 +246,19 @@
             this.precis.Size = new System.Drawing.Size(1339, 638);
             this.precis.TabIndex = 1;
             this.precis.Text = "Par Caserne";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::PimPomBro.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(1248, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(95, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // lblUtilisations
             // 
@@ -340,32 +367,6 @@
             this.cboCasernes.TabIndex = 0;
             this.cboCasernes.SelectedIndexChanged += new System.EventHandler(this.cboCasernes_SelectedIndexChanged);
             // 
-            // picLogo
-            // 
-            this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picLogo.Image = global::PimPomBro.Properties.Resources.logo;
-            this.picLogo.Location = new System.Drawing.Point(1248, -1);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(95, 78);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 10;
-            this.picLogo.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::PimPomBro.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(1248, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
             // Statitiques
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
@@ -385,9 +386,9 @@
             this.tabControl.ResumeLayout(false);
             this.General.ResumeLayout(false);
             this.General.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.precis.ResumeLayout(false);
             this.precis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -688,7 +688,6 @@ namespace MenuPrincipal
                             "values (" + idMission + ", '" + heureDepart + "', " +
                                      "'" + heureFin + "', @motif, @adresse, '" + cp + "', @ville, " +
                                      "1, @compteRendu, " + idNatureSinistre + ", " + idCaserne + ") ";
-                    MessageBox.Show(req);
                     cmd = new SQLiteCommand(req, Connexion.Connec);
                     cmd.Parameters.AddWithValue("@motif", motif);
                     cmd.Parameters.AddWithValue("@adresse", adresse);

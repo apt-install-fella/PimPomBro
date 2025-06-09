@@ -262,7 +262,6 @@ namespace PimPomBro
             // Ouvre le formulaire de gestion des pompiers
             frmGestionPompiers gestionPompiers = new frmGestionPompiers();
             gestionPompiers.Show();
-            this.Close();
         }
     }
 }

@@ -71,7 +71,7 @@
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.ItemSize = new System.Drawing.Size(200, 37);
-            this.tabControl1.Location = new System.Drawing.Point(21, 80);
+            this.tabControl1.Location = new System.Drawing.Point(21, 70);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -336,7 +336,7 @@
             this.pnlDate.Controls.Add(this.lblDeclenche);
             this.pnlDate.Controls.Add(this.lblDate);
             this.pnlDate.Controls.Add(this.lblHeure);
-            this.pnlDate.Location = new System.Drawing.Point(1029, 65);
+            this.pnlDate.Location = new System.Drawing.Point(1029, 56);
             this.pnlDate.Name = "pnlDate";
             this.pnlDate.Size = new System.Drawing.Size(419, 55);
             this.pnlDate.TabIndex = 7;
@@ -364,7 +364,7 @@
             this.picLogo.Location = new System.Drawing.Point(4, -5);
             this.picLogo.Margin = new System.Windows.Forms.Padding(4);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(95, 78);
+            this.picLogo.Size = new System.Drawing.Size(79, 69);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 11;
             this.picLogo.TabStop = false;
