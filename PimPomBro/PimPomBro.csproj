@@ -64,6 +64,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="ConnexionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnexionAdmin.Designer.cs">
+      <DependentUpon>ConnexionAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreationPompier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreationPompier.Designer.cs">
+      <DependentUpon>CreationPompier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dateHabilitation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dateHabilitation.Designer.cs">
+      <DependentUpon>dateHabilitation.cs</DependentUpon>
+    </Compile>
     <Compile Include="EtatVehicule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +99,12 @@
     </Compile>
     <Compile Include="GestionEngins.Designer.cs">
       <DependentUpon>GestionEngins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gestionPompiers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionPompiers.Designer.cs">
+      <DependentUpon>gestionPompiers.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -103,6 +127,15 @@
     <Compile Include="Statitiques.Designer.cs">
       <DependentUpon>Statitiques.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConnexionAdmin.resx">
+      <DependentUpon>ConnexionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreationPompier.resx">
+      <DependentUpon>CreationPompier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dateHabilitation.resx">
+      <DependentUpon>dateHabilitation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EtatVehicule.resx">
       <DependentUpon>EtatVehicule.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionEngins.resx">
       <DependentUpon>GestionEngins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gestionPompiers.resx">
+      <DependentUpon>gestionPompiers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -150,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Images_fond_volet2\fond_onglet_volet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ImagesGestionPompiers\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
