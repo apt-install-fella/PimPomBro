@@ -109,7 +109,7 @@ namespace PimPomBro
 
         private void txtCp_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Interdire tout caractère sauf les chiffres et les tabulations
+            //Interdire tout caractère sauf les chiffres et les tabulations et la touche retour arrière
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Tab && e.KeyChar != (char) Keys.Back){
                 e.Handled = true;
             }
@@ -497,5 +497,13 @@ namespace PimPomBro
 
         }
 
+        private void txtVille_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(char.IsDigit(e.KeyChar))
+            {
+                //On interdit les chiffres dans le nom de la ville
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -246,6 +246,7 @@
             this.txtVille.TabIndex = 4;
             this.txtVille.Text = "Ville";
             this.txtVille.Enter += new System.EventHandler(this.txtMotif_Enter);
+            this.txtVille.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVille_KeyPress);
             this.txtVille.Leave += new System.EventHandler(this.txtVille_Leave);
             // 
             // txtRue
