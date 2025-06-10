@@ -43,6 +43,7 @@
             this.chkEnCours = new System.Windows.Forms.CheckBox();
             this.txtRecherche = new System.Windows.Forms.TextBox();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.lblID = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -204,9 +205,10 @@
             // chkEnCours
             // 
             this.chkEnCours.AutoSize = true;
+            this.chkEnCours.Font = new System.Drawing.Font("Arial", 15.75F);
             this.chkEnCours.Location = new System.Drawing.Point(447, 55);
             this.chkEnCours.Name = "chkEnCours";
-            this.chkEnCours.Size = new System.Drawing.Size(143, 35);
+            this.chkEnCours.Size = new System.Drawing.Size(144, 36);
             this.chkEnCours.TabIndex = 12;
             this.chkEnCours.Text = "En cours";
             this.chkEnCours.UseVisualStyleBackColor = true;
@@ -214,15 +216,14 @@
             // 
             // txtRecherche
             // 
-            this.txtRecherche.ForeColor = System.Drawing.Color.Gray;
+            this.txtRecherche.ForeColor = System.Drawing.Color.Black;
             this.txtRecherche.Location = new System.Drawing.Point(1277, 53);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(139, 37);
             this.txtRecherche.TabIndex = 7;
-            this.txtRecherche.Text = "id...";
+            this.txtRecherche.TextChanged += new System.EventHandler(this.btnrecherche_Click);
             this.txtRecherche.Enter += new System.EventHandler(this.txtRecherche_Enter);
             this.txtRecherche.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecherche_KeyPress);
-            this.txtRecherche.Leave += new System.EventHandler(this.txtRecherche_Leave);
             // 
             // picLogo
             // 
@@ -237,11 +238,22 @@
             this.picLogo.TabIndex = 10;
             this.picLogo.TabStop = false;
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F);
+            this.lblID.Location = new System.Drawing.Point(1214, 56);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(58, 32);
+            this.lblID.TabIndex = 13;
+            this.lblID.Text = "ID :";
+            // 
             // frmTabBord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 854);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.chkEnCours);
             this.Controls.Add(this.btnrecherche);
@@ -277,6 +289,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtRecherche;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label lblID;
     }
 }
 

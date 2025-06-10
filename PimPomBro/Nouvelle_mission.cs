@@ -114,10 +114,15 @@ namespace PimPomBro
                 e.Handled = true;
             }
 
-            if(txtCp.Text.Length == 5 && e.KeyChar != (char)Keys.Back)
+            if(txtCp.Text.Length >= 5 && e.KeyChar != (char)Keys.Back)
             {
                 //On ne peut pas entrer plus de 5 chiffres
                 e.Handled = true;
+            }
+
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnConstituerEquipe_Click(btnConstituerEquipe, e);
             }
 
         }
@@ -176,8 +181,10 @@ namespace PimPomBro
             btnConstituerEquipe.Enabled = true;
             btnValider.ForeColor = Color.Black;
             btnValider.Font = new Font(btnValider.Font, FontStyle.Regular);
+            btnValider.Cursor = Cursors.No;
             btnConstituerEquipe.ForeColor = Color.Navy;
             btnConstituerEquipe.Font = new Font(btnConstituerEquipe.Font, FontStyle.Bold);
+            btnConstituerEquipe.Cursor = Cursors.Hand;
 
             txtMotif.Focus();
         }
@@ -411,6 +418,7 @@ namespace PimPomBro
                 btnValider.ForeColor = Color.Navy;
                 btnValider.Font = new Font(btnValider.Font, FontStyle.Bold);
                 btnValider.Cursor = Cursors.Hand;
+                btnValider.Focus();
                 btnConstituerEquipe.Enabled = false;
                 btnConstituerEquipe.ForeColor = Color.Black;
                 btnConstituerEquipe.Font = new Font(btnConstituerEquipe.Font, FontStyle.Regular);
@@ -465,6 +473,7 @@ namespace PimPomBro
             MessageBox.Show("Mission n° " + idMission.ToString() + " créée avec succès ! Ajout dans la base de donnée effectué");
             MesDatas.DsGlobal.AcceptChanges(); //On valide les modifications dans le DataSet
             reset();
+            btnFermer.Focus();
         }
 
         private void reset()

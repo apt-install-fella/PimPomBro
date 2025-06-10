@@ -33,9 +33,6 @@ namespace MenuPrincipal
         {
             // Charger les données depuis la base SQLite une seule fois
             ChargerToutesLesTables();
-           
-            txtRecherche.Text = "id...";
-            txtRecherche.ForeColor = Color.Gray;
 
             // Préparer le bouton recherche
             btnrecherche.BackgroundImage = System.Drawing.Image.FromFile("../../Images/Tableau_bord/check.png");
@@ -494,7 +491,7 @@ namespace MenuPrincipal
 
         private void chkEnCours_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtRecherche.Text == ""||txtRecherche.Text=="id...")
+            if (txtRecherche.Text == "")
             {
                 if (chkEnCours.Checked)
                 {
@@ -534,12 +531,13 @@ namespace MenuPrincipal
                 if (txtRecherche.Text == "")
                 {
                     GenerationMission();
-                    txtRecherche.Text = "id..."; // Réinitialiser le champ de recherche
-                    txtRecherche.ForeColor = Color.Gray; // Remettre la couleur grise
                 }
                 else{
-                    int id = int.Parse(txtRecherche.Text);
-                    GenerationMission(id);
+                    int id;
+                    if (int.TryParse(txtRecherche.Text, out id))
+                    {
+                        GenerationMission(id);
+                    }
                     e.Handled = true;
                 }
             }
@@ -553,16 +551,17 @@ namespace MenuPrincipal
 
         private void btnrecherche_Click(object sender, EventArgs e)
         {
-            if (txtRecherche.Text == "" || txtRecherche.Text == "id...")
+            if (txtRecherche.Text == "")
             {
                 GenerationMission();
-                txtRecherche.Text = "id..."; // Réinitialiser le champ de recherche
-                txtRecherche.ForeColor = Color.Gray; // Remettre la couleur grise
             }
             else
             {
-                int id = int.Parse(txtRecherche.Text);
-                GenerationMission(id);
+                int id;
+                if (int.TryParse(txtRecherche.Text, out id))
+                {
+                    GenerationMission(id);
+                }
             }
         }
 
@@ -578,15 +577,6 @@ namespace MenuPrincipal
             btn.BackColor = Color.White;
         }
 
-        private void txtRecherche_Leave(object sender, EventArgs e)
-        {
-            if (txtRecherche.Text=="")
-            {
-                txtRecherche.Text = "id...";
-                txtRecherche.ForeColor = Color.Gray;
-            }
-            
-        }
 
         private void btnNouvelleMission_Click(object sender, EventArgs e)
         {
@@ -616,8 +606,6 @@ namespace MenuPrincipal
         
         private void txtRecherche_Enter(object sender, EventArgs e)
         {
-            txtRecherche.Text = "";
-            txtRecherche.ForeColor = Color.Black;
             chkEnCours.Checked = false;
         }
 
