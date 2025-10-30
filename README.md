@@ -11,8 +11,8 @@ Elle permet de suivre les missions, gérer les pompiers et les véhicules, et de
 
 Voici quelques captures d’écran illustrant l’interface :
 
-![page_accueil](imagesReadme/page_accueil.png)  
-![gestion_pompiers](imagesReadme/gestion_pompiers.png)  
+![page_accueil](Images_for_ReadMe/Menu_PimPomBro.png)  
+![statistiques](Images_for_ReadMe/Stats_Generales.png)  
 
 ---
 
@@ -63,6 +63,9 @@ Génère un PDF récapitulatif de la mission
 
 Option de filtrer les missions affichées
 
+![page_accueil](Images_for_ReadMe/Menu_PimPomBro.png)  
+
+
 2️⃣ **Création d’une mission**
 
 Crée une mission en indiquant le type de sinistre, l’adresse, un commentaire et la caserne responsable
@@ -72,6 +75,11 @@ Affecte automatiquement les pompiers et véhicules disponibles
 Si la caserne choisie ne peut pas gérer la mission, il faut sélectionner une autre caserne
 
 Affiche le résumé des ressources mobilisées
+
+![nouvele_mission](Images_for_ReadMe/Nouvelle_Mission_PimPomBro.png)  
+![valider_mission](Images_for_ReadMe/Validation_Mission_PimPomBro.png)  
+
+
 
 3️⃣ **Gestion des informations des pompiers**
 
@@ -101,4 +109,8 @@ Affiche des statistiques sur l’ensemble de la base ou par caserne precise:
 - Caserne :
     - véhicule le plus mobilisé
     - temps d’utilisation de chaque véhicule par caserne
+ 
+![stats_generales](Images_for_ReadMe/Stats_Generales.png)  
+![stats_casernes](Images_for_ReadMe/Stats_Casernes.png)  
+
 
