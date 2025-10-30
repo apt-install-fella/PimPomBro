@@ -97,6 +97,9 @@ Permet de sélectionner un pompier pour afficher :
 
 - Accès protégé par login/mot de passe administrateur
 
+![gestion _personnel](Images_for_ReadMe/Gestion_personnel_pimpombro.jpg)  
+
+
 4️⃣ **Statistiques**
 
 Affiche des statistiques sur l’ensemble de la base ou par caserne precise:
