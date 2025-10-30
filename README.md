@@ -1,29 +1,104 @@
-# Application de gestion pour les pompier
-# PimPomBro
+# 🚒 PimPomBro
 
-image illustration (screen)
+## 📌 À propos
 
-# Description
-PimPomBro est une application réalisée en .NET afin de simplifier l'aspect gestion dans une caserne de pompier.
+**PimPomBro** est une application C# développée avec WinForms pour **la gestion complète d’une caserne de pompiers**.  
+Elle permet de suivre les missions, gérer les pompiers et les véhicules, et de générer des rapports PDF pour les opérations effectuées.  
 
-# Materiel
-Utilisation de Visual Studio en langage C# pour créer une application qui permet plusieurs diverses fonctionalités 
+---
 
-# Installation
+## Aperçu de l’application
+
+Voici quelques captures d’écran illustrant l’interface :
+
+![page_accueil](imagesReadme/page_accueil.png)  
+![gestion_pompiers](imagesReadme/gestion_pompiers.png)  
+
+---
+
+## Technologies utilisées
+
+- **Langage :** C#  
+- **Interface graphique :** WinForms (Visual Studio)  
+- **Base de données :** SQLite  
+- **Fonctionnalités supplémentaires :** génération automatique de PDF  
+
+---
+
+## Installation et lancement
+
+1. **Récupérer le projet**  
+- bash:
+  - ``git clone https://github.com/apt-install-fella/PimPomBro.git ``
+  - ``cd PimPomBro``
 
 
-# Fonctionnalités 
+3. **Ouvrir le projet dans Visual Studio**
 
-Différents volets :
-- Volet 1 : Tableau de bord avec beaucoup de users controls
-- Volet 2 : Transaction 
-- Volet 3 : Update dans la base
-- Volet 4 : Affichage un par un des données d'une table par BindingSource
-- Volet 5 : éditer pdf avec la bibliothèque textSharp
-- Volet 6 : Statistiques avec bouton pour aller à la gestion des pompiers
+4. **Vérifier la présence de SQLite**
 
-## Volet 1: 
-  On retouve un menu sur la gauche avec un bouton pour acceder aux autres volets, il y'aura aussi en bas a gache du menu un bouton "quitter" pour fermer l'application.
-  le reste de la page est consacré à l'affichage des missions comme des nitifications, avec deux boutons sur le coté pour generer un pdf ou bien passé une mission au status "terminé".
+    -Dans Visual Studio : Projet > Gérer les packages NuGet
 
-## Volet 2: 
+    -Chercher System.Data.SQLite.Core (version 1.0.119) et l’installer si nécessaire
+
+    -Cliquer sur Appliquer puis J’accepte
+
+5. **Lancer l’application**
+
+    -Appuyer sur le bouton ▶ ou utiliser la touche F5
+---
+
+## Fonctionnalités principales
+L’application utilise des liaisons de données en mode connecté ou déconnecté.
+<br>
+Toutes les modifications de la base (insertion, mise à jour) sont effectuées dans des transactions pour garantir l’intégrité des données.
+
+1️⃣ **Page d’accueil**
+
+Affiche toutes les missions (en cours ou terminées) : type de sinistre, adresse, date, commentaires, compte rendu
+
+Permet de terminer une mission en cours
+
+Génère un PDF récapitulatif de la mission
+
+Option de filtrer les missions affichées
+
+2️⃣ **Création d’une mission**
+
+Crée une mission en indiquant le type de sinistre, l’adresse, un commentaire et la caserne responsable
+
+Affecte automatiquement les pompiers et véhicules disponibles
+
+Si la caserne choisie ne peut pas gérer la mission, il faut sélectionner une autre caserne
+
+Affiche le résumé des ressources mobilisées
+
+3️⃣ **Gestion des informations des pompiers**
+
+Permet de sélectionner un pompier pour afficher :
+
+- matricule et informations personnelles
+
+- caserne de rattachement
+
+- anciennes missions et habilitations (avec dates)
+
+- disponibilité actuelle (ex : en congé)
+
+- Possibilité de modifier certaines informations
+
+- Accès protégé par login/mot de passe administrateur
+
+4️⃣ **Statistiques**
+
+Affiche des statistiques sur l’ensemble de la base ou par caserne precise:
+- Générale : 
+
+    - habilitations les plus utilisées
+    - nombre de missions par type de sinistre
+    - liste des pompiers ayant une habilitation spécifique
+      
+- Caserne :
+    - véhicule le plus mobilisé
+    - temps d’utilisation de chaque véhicule par caserne
+
